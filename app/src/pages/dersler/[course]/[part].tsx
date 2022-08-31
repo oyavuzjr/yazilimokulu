@@ -7,11 +7,15 @@ import YouTube from 'react-youtube';
 
 export default function Course() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { data, isLoading } = trpc.useQuery([
-    'course.get',
+  const { data: course, isLoading: isCourseLoading } = trpc.useQuery([
+    'course.course',
     { slug: 'python-1' },
   ]);
-  if (isLoading) {
+  const { data: part, isLoading: isPartLoading } = trpc.useQuery([
+    'course.part',
+    { slug: 'python-1' },
+  ]);
+  if (isCourseLoading || isPartLoading) {
     return <h1>loading...</h1>;
   }
   return (
@@ -47,17 +51,21 @@ export default function Course() {
             </div>
           </div>
           {/* CONTENT HERE */}
+
           <YouTube
             opts={{
               playerVars: {
                 autoplay: 1,
               },
               width: '100%',
-              height: '400px',
+              height: '700px',
               className: 'absolute',
             }}
-            videoId={'IzkgWNaxgNY'}
+            videoId={''}
           />
+
+          {JSON.stringify(course)}
+          {!isPartLoading && JSON.stringify(part)}
           {/* END CONTENT */}
         </div>
       </TitlePage>

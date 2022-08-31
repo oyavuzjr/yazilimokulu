@@ -2,7 +2,7 @@ import { createRouter } from './context';
 import { z } from 'zod';
 
 export const courseRouter = createRouter()
-  .query('get', {
+  .query('course', {
     input: z
       .object({
         slug: z.string(),
@@ -11,6 +11,18 @@ export const courseRouter = createRouter()
       .nullish(),
     resolve({ input, ctx }) {
       return ctx.prisma.course.findUnique({ where: { slug: input?.slug } });
+    },
+  })
+  .query('part', {
+    input: z
+      .object({
+        slug: z.string(),
+      })
+      .nullish(),
+    resolve({ input, ctx }) {
+      return ctx.prisma.resource.findMany({
+        where: { courseSlug: input?.slug },
+      });
     },
   })
   .query('getAll', {

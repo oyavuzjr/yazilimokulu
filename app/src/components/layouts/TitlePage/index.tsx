@@ -63,6 +63,7 @@ export default function TitlePage({ title, children }: Props) {
           >
             <Header open={true} />
           </Disclosure>
+          {children}
           <header className="py-10">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <h1 className="text-3xl font-bold tracking-tight text-white">
@@ -78,7 +79,7 @@ export default function TitlePage({ title, children }: Props) {
               {/* Replace with your content */}
               <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
                 <div className="w-full rounded-lg   border-gray-200">
-                  {children}
+                  Notebook content here
                 </div>
               </div>
               {/* /End replace */}
