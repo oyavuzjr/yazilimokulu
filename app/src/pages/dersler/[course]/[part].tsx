@@ -1,13 +1,19 @@
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import SideBar from '../../components/layouts/SideBar';
-import TitlePage from '../../components/layouts/TitlePage';
+import SideBar from '../../../components/layouts/SideBar';
+import TitlePage from '../../../components/layouts/TitlePage';
 
 export default function Course() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <SideBar>
+    <SideBar
+      navItems={[
+        { title: '1. Değişkenler', id: 1 },
+        { title: '2. Operatörler', id: 2 },
+        { title: '3. If', id: 3 },
+      ]}
+    >
       <TitlePage title="Python ile Programlama">
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           {/* Mobile top navigation */}

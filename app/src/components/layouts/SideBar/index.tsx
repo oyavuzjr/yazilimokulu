@@ -1,7 +1,24 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Dialog, Transition } from '@headlessui/react';
+/*
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+*/
+import { Fragment, ReactNode, useState } from 'react';
+import { Dialog, Menu, Transition } from '@headlessui/react';
 import {
-  Bars3Icon,
+  Bars3BottomLeftIcon,
+  BellIcon,
   CalendarIcon,
   ChartBarIcon,
   FolderIcon,
@@ -10,7 +27,11 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { Fragment, ReactNode, useState } from 'react';
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+
+type navItem = { title: string; icon?: JSX.Element; id: number };
+
+type Props = { children: ReactNode; navItems: navItem[] };
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -20,12 +41,17 @@ const navigation = [
   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
 ];
+const userNavigation = [
+  { name: 'Your Profile', href: '#' },
+  { name: 'Settings', href: '#' },
+  { name: 'Sign out', href: '#' },
+];
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
-type Props = { children: ReactNode };
-export default function Example({ children }: Props) {
+
+export default function SideBar({ children, navItems }: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -67,7 +93,7 @@ export default function Example({ children }: Props) {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-gray-800">
+                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-indigo-700 pt-5 pb-4">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-300"
@@ -91,65 +117,41 @@ export default function Example({ children }: Props) {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-                    <div className="flex flex-shrink-0 items-center px-4">
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
-                        alt="Workflow"
-                      />
-                    </div>
-                    <nav className="mt-5 space-y-1 px-2">
-                      {navigation.map((item) => (
+                  <div className="flex flex-shrink-0 items-center px-4">
+                    <img
+                      className="h-8 w-auto"
+                      src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=300"
+                      alt="Workflow"
+                    />
+                  </div>
+                  <div className="mt-5 h-0 flex-1 overflow-y-auto">
+                    <nav className="space-y-1 px-2">
+                      {navItems.map((item, idx) => (
                         <a
-                          key={item.name}
-                          href={item.href}
+                          key={item.title}
+                          href={item.id.toString()}
                           className={classNames(
-                            item.current
-                              ? 'bg-gray-900 text-white'
-                              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            idx == 0 //item.current
+                              ? 'bg-indigo-800 text-white'
+                              : 'text-indigo-100 hover:bg-indigo-600',
                             'group flex items-center px-2 py-2 text-base font-medium rounded-md'
                           )}
                         >
-                          <item.icon
-                            className={classNames(
-                              item.current
-                                ? 'text-gray-300'
-                                : 'text-gray-400 group-hover:text-gray-300',
-                              'mr-4 flex-shrink-0 h-6 w-6'
-                            )}
-                            aria-hidden="true"
-                          />
-                          {item.name}
+                          {/* {item.icon && (
+                            <item.icon
+                              className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300"
+                              aria-hidden="true"
+                            />
+                          )} */}
+                          {item.title}
                         </a>
                       ))}
                     </nav>
                   </div>
-                  <div className="flex flex-shrink-0 bg-gray-700 p-4">
-                    <a href="#" className="group block flex-shrink-0">
-                      <div className="flex items-center">
-                        <div>
-                          <img
-                            className="inline-block h-10 w-10 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-base font-medium text-white">
-                            Tom Cook
-                          </p>
-                          <p className="text-sm font-medium text-gray-400 group-hover:text-gray-300">
-                            View profile
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
                 </Dialog.Panel>
               </Transition.Child>
-              <div className="w-14 flex-shrink-0">
-                {/* Force sidebar to shrink to fit close icon */}
+              <div className="w-14 flex-shrink-0" aria-hidden="true">
+                {/* Dummy element to force sidebar to shrink to fit close icon */}
               </div>
             </div>
           </Dialog>
@@ -158,76 +160,41 @@ export default function Example({ children }: Props) {
         {/* Static sidebar for desktop */}
         <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex min-h-0 flex-1 flex-col bg-gray-800">
-            <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-              <div className="flex flex-shrink-0 items-center px-4">
-                {/* <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
-                  alt="Workflow"
-                /> */}
-                <div className="h-8"></div>
-              </div>
-              <nav className="mt-5 flex-1 space-y-1 px-2">
-                {navigation.map((item) => (
+          <div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700 pt-5">
+            <div className="flex flex-shrink-0 items-center px-4">
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=300"
+                alt="Workflow"
+              />
+            </div>
+            <div className="mt-5 flex flex-1 flex-col">
+              <nav className="flex-1 space-y-1 px-2 pb-4">
+                {navItems.map((item, idx) => (
                   <a
-                    key={item.name}
-                    href={item.href}
+                    key={item.title}
+                    href={item.id.toString()}
                     className={classNames(
-                      item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      idx == 0 //item.current
+                        ? 'bg-indigo-800 text-white'
+                        : 'text-indigo-100 hover:bg-indigo-600',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
                   >
-                    <item.icon
-                      className={classNames(
-                        item.current
-                          ? 'text-gray-300'
-                          : 'text-gray-400 group-hover:text-gray-300',
-                        'mr-3 flex-shrink-0 h-6 w-6'
-                      )}
-                      aria-hidden="true"
-                    />
-                    {item.name}
+                    {/* {item.icon && (
+                      <item.icon
+                        className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300"
+                        aria-hidden="true"
+                      />
+                    )} */}
+                    {item.title}
                   </a>
                 ))}
               </nav>
             </div>
-            <div className="flex flex-shrink-0 bg-gray-700 p-4">
-              <a href="#" className="group block w-full flex-shrink-0">
-                <div className="flex items-center">
-                  <div>
-                    <img
-                      className="inline-block h-9 w-9 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-white">Tom Cook</p>
-                    <p className="text-xs font-medium text-gray-300 group-hover:text-gray-200">
-                      View profile
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col md:pl-64">
-          <div className="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
-            <button
-              type="button"
-              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              onClick={() => setSidebarOpen(true)}
-            >
-              <span className="sr-only">Open sidebar</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          {children}
-        </div>
+        <div className="flex flex-1 flex-col md:pl-64">{children}</div>
       </div>
     </>
   );
