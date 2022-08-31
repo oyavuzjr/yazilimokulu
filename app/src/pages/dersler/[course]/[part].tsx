@@ -3,6 +3,8 @@ import { useState } from 'react';
 import SideBar from '../../../components/layouts/SideBar';
 import TitlePage from '../../../components/layouts/TitlePage';
 import { trpc } from '../../../utils/trpc';
+import YouTube from 'react-youtube';
+
 export default function Course() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { data, isLoading } = trpc.useQuery([
@@ -44,8 +46,19 @@ export default function Course() {
               </div>
             </div>
           </div>
-
-          <main className="flex flex-1 overflow-hidden">Course</main>
+          {/* CONTENT HERE */}
+          <YouTube
+            opts={{
+              playerVars: {
+                autoplay: 1,
+              },
+              width: '100%',
+              height: '400px',
+              className: 'absolute',
+            }}
+            videoId={'IzkgWNaxgNY'}
+          />
+          {/* END CONTENT */}
         </div>
       </TitlePage>
     </SideBar>
