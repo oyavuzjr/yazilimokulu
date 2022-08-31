@@ -56,10 +56,10 @@ export default function TitlePage({ title, children }: Props) {
         ```
       */}
       <div className="min-h-full">
-        <div className="bg-indigo-600 pb-32">
+        <div className="bg-blue-600 pb-32">
           <Disclosure
             as="nav"
-            className="border-b border-indigo-300 border-opacity-25 bg-indigo-600 lg:border-none"
+            className="border-b border-indigo-300 border-opacity-25 bg-blue-600 lg:border-none"
           >
             <Header open={true} />
           </Disclosure>
