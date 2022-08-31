@@ -4,6 +4,8 @@ import SideBar from '../../../components/layouts/SideBar';
 import TitlePage from '../../../components/layouts/TitlePage';
 import { trpc } from '../../../utils/trpc';
 import YouTube from 'react-youtube';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { PrismaClient } from '@prisma/client';
 
 export default function Course() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -72,3 +74,18 @@ export default function Course() {
     </SideBar>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prisma = new PrismaClient();
+  //const course = await prisma.resource
+  return {
+    paths: [{ params: { id: '1' } }, { params: { id: '2' } }],
+    fallback: false, // can also be true or 'blocking'
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: { post: {} },
+  };
+};

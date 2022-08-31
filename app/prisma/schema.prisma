@@ -77,5 +77,7 @@ model Resource {
     course      Course  @relation(fields: [courseSlug], references: [slug])
     courseSlug  String
     resourceUrl String
-    videoUrl    String
+    videoId   String
+    title       String
+    part        Int
 }
