@@ -2,10 +2,16 @@ import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import SideBar from '../../../components/layouts/SideBar';
 import TitlePage from '../../../components/layouts/TitlePage';
-
+import { trpc } from '../../../utils/trpc';
 export default function Course() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const { data, isLoading } = trpc.useQuery([
+    'course.get',
+    { slug: 'python-1' },
+  ]);
+  if (isLoading) {
+    return <h1>loading...</h1>;
+  }
   return (
     <SideBar
       navItems={[
@@ -39,25 +45,7 @@ export default function Course() {
             </div>
           </div>
 
-          <main className="flex flex-1 overflow-hidden">
-            {/* Primary column */}
-            <section
-              aria-labelledby="primary-heading"
-              className="flex h-full min-w-0 flex-1 flex-col overflow-y-auto lg:order-last"
-            >
-              <h1 id="primary-heading" className="sr-only">
-                Account
-              </h1>
-              {/* Your content */}
-            </section>
-
-            {/* Secondary column (hidden on smaller screens) */}
-            <aside className="hidden lg:order-first lg:block lg:flex-shrink-0">
-              <div className="relative flex h-full w-96 flex-col overflow-y-auto border-r border-gray-200 bg-white">
-                {/* Your content */}
-              </div>
-            </aside>
-          </main>
+          <main className="flex flex-1 overflow-hidden">Course</main>
         </div>
       </TitlePage>
     </SideBar>
