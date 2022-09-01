@@ -5,21 +5,13 @@ import TitlePage from '../../../components/layouts/TitlePage';
 import { trpc } from '../../../utils/trpc';
 import YouTube from 'react-youtube';
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
-import { PrismaClient } from '@prisma/client';
+import { Course, Resource, PrismaClient } from '@prisma/client';
+import { useRouter } from 'next/router';
 
-export default function Course() {
+type Props = { course: Course; part: Resource; notebook: string };
+
+export default function CoursePage({ course, part, notebook }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { data: course, isLoading: isCourseLoading } = trpc.useQuery([
-    'course.course',
-    { slug: 'python-1' },
-  ]);
-  const { data: part, isLoading: isPartLoading } = trpc.useQuery([
-    'course.part',
-    { slug: 'python-1' },
-  ]);
-  if (isCourseLoading || isPartLoading) {
-    return <h1>loading...</h1>;
-  }
   return (
     <SideBar
       navItems={[
@@ -63,11 +55,11 @@ export default function Course() {
               height: '700px',
               className: 'absolute',
             }}
-            videoId={''}
+            videoId={part?.videoId}
           />
-
+          {/* {JSON.stringify(parts)}
           {JSON.stringify(course)}
-          {!isPartLoading && JSON.stringify(part)}
+          {JSON.stringify(part)} */}
           {/* END CONTENT */}
         </div>
       </TitlePage>
@@ -79,13 +71,35 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const prisma = new PrismaClient();
   //const course = await prisma.resource
   return {
-    paths: [{ params: { id: '1' } }, { params: { id: '2' } }],
+    paths: [
+      { params: { course: 'python-basic', part: '1' } },
+      { params: { course: 'python-basic', part: '2' } },
+    ],
     fallback: false, // can also be true or 'blocking'
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const courseSlug = params && (params.courseSlug as string);
+  const partNumber = params && parseInt(params.part as string);
+  const prisma = new PrismaClient();
+  const course = await prisma.course.findFirst({
+    where: { slug: courseSlug },
+    include: { resources: true },
+  });
+  const part = await prisma.resource.findFirst({
+    where: { courseSlug: courseSlug, part: partNumber },
+  });
+  console.log('part', part);
+  console.log('course', course);
+  console.log('NotebookUrl', part?.resourceUrl);
+
+  const notebook = part && (await fetch(part?.resourceUrl));
+  const notebookContents = notebook && (await notebook.text());
+  console.log('Notebook fetch result', notebookContents);
+
   return {
-    props: { post: {} },
+    props: { course, part, notebook: notebookContents },
   };
 };
