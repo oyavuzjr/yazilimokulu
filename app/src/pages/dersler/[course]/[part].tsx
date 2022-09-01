@@ -38,7 +38,7 @@ export default function CoursePage({ course, part, notebook }: Props) {
             videoId={part?.videoId}
           />
         }
-        title="Python ile Programlama"
+        title={part.title}
       >
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           {/* Mobile top navigation */}

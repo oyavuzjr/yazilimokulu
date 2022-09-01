@@ -42,9 +42,19 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-type Props = { title: string; children: ReactNode; video?: ReactNode };
+type Props = {
+  title: string;
+  secondaryTitle?: string;
+  children: ReactNode;
+  video?: ReactNode;
+};
 
-export default function TitlePage({ title, children, video }: Props) {
+export default function TitlePage({
+  title,
+  secondaryTitle,
+  children,
+  video,
+}: Props) {
   return (
     <>
       {/*
@@ -69,6 +79,9 @@ export default function TitlePage({ title, children, video }: Props) {
               <h1 className="text-3xl font-bold tracking-tight text-white">
                 {title}
               </h1>
+              <h3 className="text-xl tracking-tight text-zinc-300">
+                {secondaryTitle}
+              </h3>
             </div>
           </header>
         </div>

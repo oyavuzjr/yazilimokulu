@@ -2700,6 +2700,7 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.cell.code_cell .input_prompt {
   border-right: 2px solid #bbc4c5;
+  display: none;
 }
 .ipynb-renderer-root div.cell.selected .prompt {
   top: 0;
