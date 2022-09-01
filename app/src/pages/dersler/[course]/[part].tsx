@@ -7,11 +7,15 @@ import YouTube from 'react-youtube';
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import { Course, Resource, PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
+import { IpynbRenderer } from 'react-ipynb-renderer';
+import 'katex/dist/katex.min.css';
+// import 'react-ipynb-renderer/dist/styles/oceans16.css';
 
 type Props = { course: Course; part: Resource; notebook: string };
 
 export default function CoursePage({ course, part, notebook }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const notebookJSON = JSON.parse(notebook);
   return (
     <SideBar
       navItems={[
@@ -61,7 +65,22 @@ export default function CoursePage({ course, part, notebook }: Props) {
           </div>
           {/* CONTENT HERE */}
 
-          {'Content Here'}
+          <IpynbRenderer
+            ipynb={notebookJSON}
+            syntaxTheme="xonokai"
+            language="python"
+            bgTransparent={true}
+            formulaOptions={{
+              // optional
+              renderer: 'mathjax', // katex by default
+              katex: {
+                delimiters: 'gitlab', // dollars by default
+                katexOptions: {
+                  fleqn: false,
+                },
+              },
+            }}
+          />
           {/* {JSON.stringify(parts)}
           {JSON.stringify(course)}
           {JSON.stringify(part)} */}
