@@ -11,7 +11,8 @@ import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'katex/dist/katex.min.css';
 import { title } from 'process';
 // import 'react-ipynb-renderer/dist/styles/grade3.css';
-
+import { ArrowLongLeftIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 type Props = {
   course: Course;
   part: Resource;
@@ -24,6 +25,17 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
   const notebookJSON = JSON.parse(notebook);
   return (
     <SideBar
+      topOfBar={
+        <span>
+          {' '}
+          <div className="text-white text-lg">
+            <span className="text-2xl pr-2 font-thin">
+              <Link href={`/dersler/${course.slug}`}>{'<'}</Link>
+            </span>
+            {course.name}
+          </div>
+        </span>
+      }
       navItems={parts.map((part) => ({
         title: part.id + '.' + part.title,
         id: part.part,

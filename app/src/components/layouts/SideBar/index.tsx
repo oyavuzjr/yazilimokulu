@@ -36,6 +36,7 @@ type Props = {
   children: ReactNode;
   navItems: navItem[];
   selectedIndex: number;
+  topOfBar: ReactNode;
 };
 
 const navigation = [
@@ -56,7 +57,12 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function SideBar({ children, navItems, selectedIndex }: Props) {
+export default function SideBar({
+  children,
+  navItems,
+  selectedIndex,
+  topOfBar,
+}: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -172,11 +178,7 @@ export default function SideBar({ children, navItems, selectedIndex }: Props) {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-grow flex-col overflow-y-auto bg-sky-800 pt-5">
             <div className="flex flex-shrink-0 items-center px-4">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=300"
-                alt="Workflow"
-              />
+              <div className=" w-auto">{topOfBar}</div>
             </div>
             <div className="mt-5 flex flex-1 flex-col">
               <nav className="flex-1 space-y-1 px-2 pb-4">
