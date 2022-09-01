@@ -9,20 +9,26 @@ import { Course, Resource, PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'katex/dist/katex.min.css';
+import { title } from 'process';
 // import 'react-ipynb-renderer/dist/styles/grade3.css';
 
-type Props = { course: Course; part: Resource; notebook: string };
+type Props = {
+  course: Course;
+  part: Resource;
+  notebook: string;
+  parts: Resource[];
+};
 
-export default function CoursePage({ course, part, notebook }: Props) {
+export default function CoursePage({ course, part, notebook, parts }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const notebookJSON = JSON.parse(notebook);
   return (
     <SideBar
-      navItems={[
-        { title: '1. Değişkenler', id: 1 },
-        { title: '2. Operatörler', id: 2 },
-        { title: '3. If', id: 3 },
-      ]}
+      navItems={parts.map((part) => ({
+        title: part.id + '.' + part.title,
+        id: part.part,
+      }))}
+      selectedIndex={part.part - 1}
     >
       <TitlePage
         video={
@@ -54,7 +60,7 @@ export default function CoursePage({ course, part, notebook }: Props) {
               <div>
                 <button
                   type="button"
-                  className="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md bg-sky-600 text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  className="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md bg-sky-600 text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                   onClick={() => setMobileMenuOpen(true)}
                 >
                   <span className="sr-only">Open sidebar</span>
@@ -115,8 +121,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const notebook = part && (await fetch(part?.resourceUrl));
   const notebookContents = notebook && (await notebook.text());
-
+  console.log('@@@COURSE', course);
   return {
-    props: { course, part, notebook: notebookContents },
+    props: {
+      course,
+      part,
+      notebook: notebookContents,
+      parts: course && course.resources,
+    },
   };
 };

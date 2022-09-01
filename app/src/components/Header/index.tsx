@@ -58,7 +58,7 @@ export default function Example({ open }: Props) {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? 'bg-sky-700 text-white'
+                        ? 'bg-sky-600 text-white'
                         : 'text-white hover:bg-sky-500 hover:bg-opacity-75',
                       'rounded-md py-2 px-3 text-sm font-medium'
                     )}
@@ -164,7 +164,7 @@ export default function Example({ open }: Props) {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'bg-sky-700 text-white'
+                  ? 'bg-sky-600 text-white'
                   : 'text-white hover:bg-sky-500 hover:bg-opacity-75',
                 'block rounded-md py-2 px-3 text-base font-medium'
               )}

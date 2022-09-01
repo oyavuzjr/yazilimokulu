@@ -31,7 +31,11 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 type navItem = { title: string; icon?: JSX.Element; id: number };
 
-type Props = { children: ReactNode; navItems: navItem[] };
+type Props = {
+  children: ReactNode;
+  navItems: navItem[];
+  selectedIndex: number;
+};
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -51,7 +55,7 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function SideBar({ children, navItems }: Props) {
+export default function SideBar({ children, navItems, selectedIndex }: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -131,7 +135,7 @@ export default function SideBar({ children, navItems }: Props) {
                           key={item.title}
                           href={item.id.toString()}
                           className={classNames(
-                            idx == 0 //item.current
+                            idx == selectedIndex //item.current
                               ? 'bg-sky-800 text-white'
                               : 'text-indigo-100 hover:bg-sky-600',
                             'group flex items-center px-2 py-2 text-base font-medium rounded-md'
@@ -175,8 +179,8 @@ export default function SideBar({ children, navItems }: Props) {
                     key={item.title}
                     href={item.id.toString()}
                     className={classNames(
-                      idx == 0 //item.current
-                        ? 'bg-sky-800 text-white'
+                      idx == selectedIndex //item.current
+                        ? 'bg-sky-800 bg-blue-300 font-extrabold'
                         : 'text-indigo-100 hover:bg-sky-600',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
