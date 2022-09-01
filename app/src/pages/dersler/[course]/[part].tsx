@@ -81,9 +81,6 @@ export default function CoursePage({ course, part, notebook }: Props) {
               },
             }}
           />
-          {/* {JSON.stringify(parts)}
-          {JSON.stringify(course)}
-          {JSON.stringify(part)} */}
           {/* END CONTENT */}
         </div>
       </TitlePage>
@@ -115,13 +112,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const part = await prisma.resource.findFirst({
     where: { courseSlug: courseSlug, part: partNumber },
   });
-  console.log('part', part);
-  console.log('course', course);
-  console.log('NotebookUrl', part?.resourceUrl);
 
   const notebook = part && (await fetch(part?.resourceUrl));
   const notebookContents = notebook && (await notebook.text());
-  console.log('Notebook fetch result', notebookContents);
 
   return {
     props: { course, part, notebook: notebookContents },
