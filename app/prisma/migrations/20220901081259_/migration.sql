@@ -58,6 +58,9 @@ CREATE TABLE "Resource" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "courseSlug" TEXT NOT NULL,
     "resourceUrl" TEXT NOT NULL,
+    "videoId" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "part" INTEGER NOT NULL,
     CONSTRAINT "Resource_courseSlug_fkey" FOREIGN KEY ("courseSlug") REFERENCES "Course" ("slug") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
