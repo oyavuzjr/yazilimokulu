@@ -209,7 +209,7 @@ export default function CoursePage({ course }: Props) {
                 <div className="relative">
                   <img
                     className="h-16 w-16 rounded-full"
-                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png"
                     alt=""
                   />
                   <span
