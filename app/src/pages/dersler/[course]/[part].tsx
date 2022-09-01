@@ -108,12 +108,21 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const prisma = new PrismaClient();
-  //const course = await prisma.resource
+  const courses = await prisma.course.findMany({
+    include: { resources: true },
+  });
+  const parameters = courses.map((course) =>
+    course.resources.map((resource) => ({
+      params: {
+        course: resource.courseSlug,
+        part: resource.part.toString(),
+      },
+    }))
+  );
+  console.log('@@@@@@', JSON.stringify(parameters));
   return {
-    paths: [
-      { params: { course: 'python-basic', part: '1' } },
-      { params: { course: 'python-basic', part: '2' } },
-    ],
+    // eslint-disable-next-line prefer-spread
+    paths: parameters.flat(),
     fallback: false, // can also be true or 'blocking'
   };
 };

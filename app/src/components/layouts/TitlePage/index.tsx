@@ -67,12 +67,7 @@ export default function TitlePage({
       */}
       <div className="min-h-full bg-neutral-300">
         <div className="bg-blue-600 pb-32">
-          <Disclosure
-            as="nav"
-            className="border-b border-indigo-300 border-opacity-25 bg-blue-600 lg:border-none"
-          >
-            <Header open={true} />
-          </Disclosure>
+          <Header open={true} />
           {video}
           <header className="py-10">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
