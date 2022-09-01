@@ -28,6 +28,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 type navItem = { title: string; icon?: JSX.Element; id: number };
 
@@ -131,7 +132,7 @@ export default function SideBar({ children, navItems, selectedIndex }: Props) {
                   <div className="mt-5 h-0 flex-1 overflow-y-auto">
                     <nav className="space-y-1 px-2">
                       {navItems.map((item, idx) => (
-                        <a
+                        <Link
                           key={item.title}
                           href={item.id.toString()}
                           className={classNames(
@@ -148,7 +149,7 @@ export default function SideBar({ children, navItems, selectedIndex }: Props) {
                             />
                           )} */}
                           {item.title}
-                        </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
