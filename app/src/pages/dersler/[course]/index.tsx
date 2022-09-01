@@ -48,9 +48,8 @@ const navigation = [
   { name: 'Company', href: '#' },
 ];
 const breadcrumbs = [
-  { name: 'Jobs', href: '#', current: false },
-  { name: 'Front End Developer', href: '#', current: false },
-  { name: 'Applicants', href: '#', current: true },
+  { name: 'Dersler', href: '/dersler', current: false },
+  { name: 'Python Programlama', href: '/dersler/python-basic', current: false },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -154,6 +153,7 @@ export default function CoursePage({ course }: Props) {
                   <ol role="list" className="flex items-center space-x-4">
                     <li>
                       <div>
+                        <Link href='/'>
                         <a
                           href="#"
                           className="text-gray-400 hover:text-gray-500"
@@ -164,6 +164,7 @@ export default function CoursePage({ course }: Props) {
                           />
                           <span className="sr-only">Home</span>
                         </a>
+                        </Link>
                       </div>
                     </li>
                     {breadcrumbs.map((item) => (
@@ -265,14 +266,14 @@ export default function CoursePage({ course }: Props) {
                           {course.resources.length}
                         </dd>
                       </div>
-                      <div className="sm:col-span-1">
+                      {/* <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
                           Phone
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
                           +1 555-555-5555
                         </dd>
-                      </div>
+                      </div> */}
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">
                           About
