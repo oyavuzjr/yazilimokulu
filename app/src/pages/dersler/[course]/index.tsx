@@ -27,6 +27,7 @@ import {
   PlayIcon,
   QuestionMarkCircleIcon,
   UserIcon,
+  ClockIcon,
 } from '@heroicons/react/20/solid';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Header from '../../../components/Header';
@@ -64,47 +65,40 @@ const eventTypes = {
   applied: { icon: UserIcon, bgColorClass: 'bg-gray-400' },
   advanced: { icon: HandThumbUpIcon, bgColorClass: 'bg-blue-500' },
   completed: { icon: CheckIcon, bgColorClass: 'bg-green-500' },
+  progress: { icon: ClockIcon, bgColorClass: 'bg-neutral-400' },
 };
 const timeline = [
   {
     id: 1,
-    type: eventTypes.applied,
-    content: 'Applied to',
-    target: 'Front End Developer',
-    date: 'Sep 20',
+    type: eventTypes.completed,
+    content: 'Tamamlandı',
+    target: 'Challenge 1',
+    date: '',
     datetime: '2020-09-20',
   },
   {
     id: 2,
-    type: eventTypes.advanced,
-    content: 'Advanced to phone screening by',
-    target: 'Bethany Blake',
-    date: 'Sep 22',
+    type: eventTypes.completed,
+    content: 'Tamamlandı',
+    target: 'Challenge 2',
+    date: '',
     datetime: '2020-09-22',
   },
   {
     id: 3,
-    type: eventTypes.completed,
-    content: 'Completed phone screening with',
-    target: 'Martha Gardner',
-    date: 'Sep 28',
+    type: eventTypes.progress,
+    content: '',
+    target: 'Challenge 3',
+    date: '',
     datetime: '2020-09-28',
   },
   {
     id: 4,
-    type: eventTypes.advanced,
-    content: 'Advanced to interview by',
-    target: 'Bethany Blake',
-    date: 'Sep 30',
+    type: eventTypes.progress,
+    content: '',
+    target: 'Challenge 4',
+    date: '',
     datetime: '2020-09-30',
-  },
-  {
-    id: 5,
-    type: eventTypes.completed,
-    content: 'Completed interview with',
-    target: 'Katherine Snyder',
-    date: 'Oct 4',
-    datetime: '2020-10-04',
   },
 ];
 const comments = [
@@ -251,25 +245,25 @@ export default function CoursePage({ course }: Props) {
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
-                          Application for
+                          Seviye
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          Backend Developer
+                          Başlangıç
                         </dd>
                       </div>
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
-                          Email address
+                          Programlama Dili
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
-                          ricardocooper@example.com
-                        </dd>
+                        <dd className="mt-1 text-sm text-gray-900">Python</dd>
                       </div>
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
-                          Salary expectation
+                          Ders Sayısı
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">$120,000</dd>
+                        <dd className="mt-1 text-sm text-gray-900">
+                          {course.resources.length}
+                        </dd>
                       </div>
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
@@ -452,7 +446,7 @@ export default function CoursePage({ course }: Props) {
                   id="timeline-title"
                   className="text-lg font-medium text-gray-900"
                 >
-                  Timeline
+                  Egzersizler
                 </h2>
 
                 {/* Activity Feed */}
