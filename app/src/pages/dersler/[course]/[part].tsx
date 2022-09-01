@@ -9,7 +9,7 @@ import { Course, Resource, PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import 'katex/dist/katex.min.css';
-// import 'react-ipynb-renderer/dist/styles/oceans16.css';
+import 'react-ipynb-renderer/dist/styles/grade3.css';
 
 type Props = { course: Course; part: Resource; notebook: string };
 

@@ -1,9 +1,5 @@
-/*
-This is a non official port for jupyter notebook of the solarizedl theme, documented here:
-http://ethanschoonover.com/solarized
-*/
-/* solarized base colors */
-/* solarized notebook colors */
+/* grade3 base colors */
+/* grade3 notebook colors */
 /* jtplot figure style */
 /* selection, hover, prompts, brackets colors */
 /* code, text, markdown, & tooltip colors */
@@ -13,8 +9,8 @@ http://ethanschoonover.com/solarized
 /* buttons, widgets, kernels colors */
 /* tables and dataframes colors */
 /* btn, scrollbar and shadow colors */
-/* solarized ansi colors */
-/* solarized codemirror colors */
+/* grade3 ansi colors */
+/* grade3 codemirror colors */
 .ipynb-renderer-root {
   /*****************************************************************
  Notebook stylization  (toolbars, lists, menus, scroll & buttons)
@@ -122,7 +118,7 @@ http://ethanschoonover.com/solarized
   font-family: sans-serif;
   font-size: 13pt;
   line-height: 170%;
-  color: #586e75;
+  color: #303030;
   -webkit-font-smoothing: antialiased !important;
   padding-top: 25px !important;
 }
@@ -130,26 +126,26 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.body {
   font-family: sans-serif;
   font-size: 13pt;
-  color: #586e75;
-  background-color: lightgray;
-  background: lightgray;
+  color: #303030;
+  background-color: #ffffff;
+  background: #ffffff;
   -webkit-font-smoothing: antialiased !important;
 }
 .ipynb-renderer-root body.notebook_app {
   padding: 0;
-  background-color: lightgray;
-  background: lightgray;
+  background-color: #ffffff;
+  background: #ffffff;
   padding-right: 0px !important;
   overflow-y: hidden;
 }
 .ipynb-renderer-root a {
   font-family: sans-serif;
-  color: #586e75;
+  color: #303030;
   -webkit-font-smoothing: antialiased !important;
 }
 .ipynb-renderer-root a:hover,
 .ipynb-renderer-root a:focus {
-  color: #47585e;
+  color: #2f2f2f;
   -webkit-font-smoothing: antialiased !important;
 }
 .ipynb-renderer-root div#maintoolbar {
@@ -158,8 +154,8 @@ http://ethanschoonover.com/solarized
   margin-left: -10%;
   padding-right: 8%;
   float: left;
-  background: lightgray !important;
-  background-color: lightgray !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 .ipynb-renderer-root #maintoolbar {
   margin-bottom: -3px;
@@ -177,7 +173,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .list_header,
 .ipynb-renderer-root div#notebook_list_header.row.list_header {
   font-size: 14pt;
-  color: #47585e;
+  color: #2f2f2f;
   background-color: transparent;
   height: 35px;
 }
@@ -192,19 +188,19 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root #running .panel-group .panel .panel-heading {
   font-size: 14pt;
-  color: #586e75;
+  color: #303030;
   padding: 8px 8px;
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
 }
 .ipynb-renderer-root #running .panel-group .panel .panel-heading a {
   font-size: 14pt;
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root #running .panel-group .panel .panel-heading a:focus,
 .ipynb-renderer-root #running .panel-group .panel .panel-heading a:hover {
   font-size: 14pt;
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root
   #running
@@ -213,10 +209,10 @@ http://ethanschoonover.com/solarized
   .panel-body
   .list_container
   .list_item {
-  background: #f2eee1;
-  background-color: #f2eee1;
+  background: #f4f4f4;
+  background-color: #f4f4f4;
   padding: 2px;
-  border-bottom: 2px solid #e4dabd;
+  border-bottom: 2px solid #dedede;
 }
 .ipynb-renderer-root
   #running
@@ -225,8 +221,8 @@ http://ethanschoonover.com/solarized
   .panel-body
   .list_container
   .list_item:hover {
-  background: #f2eee1;
-  background-color: #f2eee1;
+  background: #f4f4f4;
+  background-color: #f4f4f4;
 }
 .ipynb-renderer-root #running .panel-group .panel .panel-body {
   padding: 2px;
@@ -254,7 +250,7 @@ http://ethanschoonover.com/solarized
   border-color: transparent;
 }
 .ipynb-renderer-root #project_name > ul > li > a > i.fa.fa-home {
-  color: #93a1a1;
+  color: #ff7823;
   font-size: 17pt;
   display: inline-block;
   position: static;
@@ -264,7 +260,7 @@ http://ethanschoonover.com/solarized
   vertical-align: text-top;
 }
 .ipynb-renderer-root .fa-folder:before {
-  color: #268bd2;
+  color: #126dce;
 }
 .ipynb-renderer-root .fa-arrow-up:before {
   font-size: 14px;
@@ -278,7 +274,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root
   span#sort-name.btn.btn-xs.btn-default.sort-action:hover
   .fa {
-  color: #51666c;
+  color: #ef5c00;
 }
 .ipynb-renderer-root .folder_icon:before {
   display: inline-block;
@@ -288,7 +284,7 @@ http://ethanschoonover.com/solarized
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: '\f07b';
-  color: #268bd2;
+  color: #126dce;
 }
 .ipynb-renderer-root .notebook_icon:before {
   display: inline-block;
@@ -299,7 +295,7 @@ http://ethanschoonover.com/solarized
   -moz-osx-font-smoothing: grayscale;
   content: '\f02d';
   position: relative;
-  color: #859900 !important;
+  color: #009e07 !important;
   top: 0px;
 }
 .ipynb-renderer-root .file_icon:before {
@@ -312,7 +308,7 @@ http://ethanschoonover.com/solarized
   content: '\f15b';
   position: relative;
   top: 0px;
-  color: #657b83 !important;
+  color: #6a737d !important;
 }
 .ipynb-renderer-root #project_name a {
   display: inline-flex;
@@ -325,15 +321,15 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div#notebook_toolbar div.dynamic-instructions {
   font-family: sans-serif;
   font-size: 17px;
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root span#login_widget > .button,
 .ipynb-renderer-root #logout {
   font-family: 'Proxima Nova', sans-serif;
-  color: #586e75;
+  color: #303030;
   background: transparent;
   background-color: transparent;
-  border: 2px solid #d2d8d8;
+  border: 2px solid #e5e5e5;
   font-weight: normal;
   box-shadow: none;
   text-shadow: none;
@@ -343,10 +339,10 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root span#login_widget > .button:hover,
 .ipynb-renderer-root #logout:hover {
-  color: #51666c;
+  color: #ef5c00;
   background-color: transparent;
   background: transparent;
-  border: 2px solid #51666c;
+  border: 2px solid #ef5c00;
   background-image: none;
   box-shadow: none !important;
   border-radius: 3px;
@@ -361,10 +357,10 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root #logout.active,
 .ipynb-renderer-root .open > .dropdown-togglespan#login_widget > .button,
 .ipynb-renderer-root .open > .dropdown-toggle#logout {
-  color: #cb4b16;
-  background-color: #586e75;
-  background: #586e75;
-  border-color: #586e75;
+  color: #1c1c1c;
+  background-color: #303030;
+  background: #303030;
+  border-color: #303030;
   background-image: none;
   box-shadow: none !important;
   border-radius: 2px;
@@ -377,19 +373,19 @@ http://ethanschoonover.com/solarized
   -webkit-box-sizing: border-box;
 }
 .ipynb-renderer-root body > #header {
-  background: lightgray;
-  background-color: lightgray;
+  background: #ffffff;
+  background-color: #ffffff;
   position: relative;
   z-index: 100;
 }
 .ipynb-renderer-root .list_container {
   font-size: 13pt;
-  color: #586e75;
+  color: #303030;
   border: none;
   text-shadow: none !important;
 }
 .ipynb-renderer-root .list_container > div {
-  border-bottom: 1px solid #eae2ca;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.14);
   font-size: 13pt;
 }
 .ipynb-renderer-root .list_header > div,
@@ -406,7 +402,7 @@ http://ethanschoonover.com/solarized
   font-size: 13pt;
 }
 .ipynb-renderer-root .item_icon {
-  color: #268bd2;
+  color: #126dce;
   font-size: 13pt;
   vertical-align: middle;
 }
@@ -444,8 +440,8 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root #button-select-all.focus,
 .ipynb-renderer-root #button-select-all:active.focus,
 .ipynb-renderer-root #button-select-all.active.focus {
-  background-color: #d2d8d8 !important;
-  background: #d2d8d8 !important;
+  background-color: #e5e5e5 !important;
+  background: #e5e5e5 !important;
 }
 .ipynb-renderer-root button#tree-selector-btn {
   height: 34px;
@@ -473,14 +469,14 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .list_container a {
   font-size: 16px;
-  color: #586e75;
+  color: #303030;
   border: none;
   text-shadow: none !important;
   font-weight: normal;
   font-style: normal;
 }
 .ipynb-renderer-root div.list_container a:hover {
-  color: #47585e;
+  color: #2f2f2f;
 }
 .ipynb-renderer-root .list_header > div input,
 .ipynb-renderer-root .list_item > div input {
@@ -492,18 +488,18 @@ http://ethanschoonover.com/solarized
   top: -1px;
 }
 .ipynb-renderer-root div.list_item:hover {
-  background-color: #ebe4ce;
+  background-color: #fafafa;
 }
 .ipynb-renderer-root .breadcrumb > li {
   font-size: 12pt;
-  color: #586e75;
+  color: #303030;
   border: none;
   text-shadow: none !important;
 }
 .ipynb-renderer-root .breadcrumb > li + li:before {
   content: '/\00a0';
   padding: 0px;
-  color: #586e75;
+  color: #303030;
   font-size: 18px;
 }
 .ipynb-renderer-root #project_name > .breadcrumb {
@@ -539,14 +535,14 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .nav-tabs > li.active > a,
 .ipynb-renderer-root .nav-tabs > li.active > a:hover,
 .ipynb-renderer-root .nav-tabs > li.active > a:focus {
-  color: #51666c;
+  color: #ef5c00;
   background-color: transparent;
   border-color: transparent;
   border-bottom: 2px solid transparent;
 }
 .ipynb-renderer-root .nav > li.disabled > a,
 .ipynb-renderer-root .nav > li.disabled > a:hover {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root .nav-tabs > li > a:before {
   content: '';
@@ -555,7 +551,7 @@ http://ethanschoonover.com/solarized
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #51666c;
+  background-color: #ef5c00;
   visibility: hidden;
   -webkit-transform: perspective(0) scaleX(0);
   transform: perspective(0) scaleX(0);
@@ -575,7 +571,7 @@ http://ethanschoonover.com/solarized
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #51666c;
+  background-color: #ef5c00;
   visibility: visible;
   -webkit-transform: perspective(1) scaleX(1);
   transform: perspective(1) scaleX(1);
@@ -587,11 +583,11 @@ http://ethanschoonover.com/solarized
   padding-top: 4px;
 }
 .ipynb-renderer-root .notebook_app {
-  background-color: lightgray;
+  background-color: #ffffff;
 }
 .ipynb-renderer-root #notebook-container {
   padding: 13px 2px;
-  background-color: lightgray;
+  background-color: #ffffff;
   min-height: 0px;
   box-shadow: none;
   width: 980px;
@@ -618,24 +614,24 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .notebook_app #header,
 .ipynb-renderer-root .edit_app #header {
   box-shadow: none !important;
-  background-color: lightgray;
-  border-bottom: 2px solid #eae2ca;
+  background-color: #ffffff;
+  border-bottom: 2px solid rgba(180, 180, 180, 0.14);
 }
 .ipynb-renderer-root #header,
 .ipynb-renderer-root .edit_app #header {
   font-family: sans-serif;
   font-size: 13pt;
   box-shadow: none;
-  background-color: lightgray;
+  background-color: #ffffff;
 }
 .ipynb-renderer-root #header .header-bar,
 .ipynb-renderer-root .edit_app #header .header-bar {
-  background: lightgray;
-  background-color: lightgray;
+  background: #ffffff;
+  background-color: #ffffff;
 }
 .ipynb-renderer-root body > #header .header-bar {
   width: 100%;
-  background: lightgray;
+  background: #ffffff;
 }
 .ipynb-renderer-root span.checkpoint_status,
 .ipynb-renderer-root span.autosave_status {
@@ -644,12 +640,12 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root #menubar,
 .ipynb-renderer-root div#menubar {
-  background-color: lightgray;
+  background-color: #ffffff;
   padding-top: 0px !important;
 }
 .ipynb-renderer-root #menubar .navbar,
 .ipynb-renderer-root .navbar-default {
-  background-color: lightgray;
+  background-color: #ffffff;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -662,20 +658,20 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root p.navbar-text.indicator_area {
   margin-top: 8px !important;
   margin-bottom: 0px;
-  color: #93a1a1;
+  color: #ff7823;
 }
 .ipynb-renderer-root .navbar-default {
   font-family: sans-serif;
   font-size: 13pt;
-  background-color: lightgray;
-  border-color: #efeada;
+  background-color: #ffffff;
+  border-color: #d4d4d4;
   line-height: 1.5em;
   padding-bottom: 0px;
 }
 .ipynb-renderer-root .navbar-default .navbar-nav > li > a {
   font-family: sans-serif;
   font-size: 13pt;
-  color: #586e75;
+  color: #303030;
   display: block;
   line-height: 1.5em;
   padding-top: 14px;
@@ -683,18 +679,18 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .navbar-default .navbar-nav > li > a:hover,
 .ipynb-renderer-root .navbar-default .navbar-nav > li > a:focus {
-  color: #47585e !important;
-  background-color: #eae2ca !important;
-  border-color: #efeada !important;
+  color: #2f2f2f !important;
+  background-color: rgba(180, 180, 180, 0.14) !important;
+  border-color: #d4d4d4 !important;
   line-height: 1.5em;
   transition: 80ms ease;
 }
 .ipynb-renderer-root .navbar-default .navbar-nav > .open > a,
 .ipynb-renderer-root .navbar-default .navbar-nav > .open > a:hover,
 .ipynb-renderer-root .navbar-default .navbar-nav > .open > a:focus {
-  color: #cb4b16;
-  background-color: #f5f2e7;
-  border-color: #f5f2e7;
+  color: #1c1c1c;
+  background-color: #dedede;
+  border-color: #dedede;
   line-height: 1.5em;
 }
 .ipynb-renderer-root .navbar-nav > li > .dropdown-menu {
@@ -720,7 +716,7 @@ http://ethanschoonover.com/solarized
   div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 .ipynb-renderer-root
   div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
-  color: #586e75 !important;
+  color: #303030 !important;
   background-color: transparent !important;
   border-color: transparent !important;
   padding-bottom: 0px !important;
@@ -734,7 +730,7 @@ http://ethanschoonover.com/solarized
   z-index: 0;
 }
 .ipynb-renderer-root .notification_widget {
-  color: #268bd2;
+  color: #126dce;
   z-index: -500;
   font-size: 9pt;
   background: transparent;
@@ -758,7 +754,7 @@ http://ethanschoonover.com/solarized
   border: none !important;
   background: transparent !important;
   background-color: transparent !important;
-  color: #586e75 !important;
+  color: #303030 !important;
 }
 .ipynb-renderer-root div.notification_widget.info,
 .ipynb-renderer-root .notification_widget.info {
@@ -771,14 +767,14 @@ http://ethanschoonover.com/solarized
   display: none;
 }
 .ipynb-renderer-root .item_icon {
-  color: #268bd2;
+  color: #126dce;
 }
 .ipynb-renderer-root .item_buttons .kernel-name {
   font-size: 13pt;
-  color: #268bd2;
+  color: #126dce;
 }
 .ipynb-renderer-root .running_notebook_icon:before {
-  color: #859900 !important;
+  color: #009e07 !important;
   font: normal normal normal 15px/1 FontAwesome;
   font-size: 15px;
   text-rendering: auto;
@@ -791,7 +787,7 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .item_buttons .running-indicator {
   padding-top: 4px;
-  color: #859900;
+  color: #009e07;
   font-family: sans-serif;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -803,7 +799,7 @@ http://ethanschoonover.com/solarized
   background-color: transparent;
   margin-bottom: 0px !important;
   vertical-align: bottom !important;
-  color: #93a1a1 !important;
+  color: #828892 !important;
   cursor: default !important;
 }
 .ipynb-renderer-root #notification_area,
@@ -823,17 +819,17 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root #modal_indicator {
   float: right !important;
   color: #4c8be2;
-  background: lightgray;
-  background-color: lightgray;
+  background: #ffffff;
+  background-color: #ffffff;
   margin-top: 8px !important;
   margin-left: 0px;
 }
 .ipynb-renderer-root #kernel_indicator {
   float: right !important;
-  color: #93a1a1;
-  background: lightgray;
-  background-color: lightgray;
-  border-left: 2px solid #93a1a1;
+  color: #ff7823;
+  background: #ffffff;
+  background-color: #ffffff;
+  border-left: 2px solid #ff7823;
   padding-top: 0px;
   padding-bottom: 4px;
   margin-top: 10px !important;
@@ -842,9 +838,9 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root #kernel_indicator .kernel_indicator_name {
   font-size: 17px;
-  color: #93a1a1;
-  background: lightgray;
-  background-color: lightgray;
+  color: #ff7823;
+  background: #ffffff;
+  background-color: #ffffff;
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 4px;
@@ -917,9 +913,9 @@ http://ethanschoonover.com/solarized
   div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 .ipynb-renderer-root
   div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
-  color: #586e75;
-  background-color: lightgray;
-  border-color: lightgray;
+  color: #303030;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 .ipynb-renderer-root #notification_area,
 .ipynb-renderer-root div.notification_area {
@@ -961,8 +957,8 @@ http://ethanschoonover.com/solarized
   padding: 0px;
   text-align: left;
   border: none;
-  background-color: #f5f2e7;
-  background: #f5f2e7;
+  background-color: #dedede;
+  background: #dedede;
   line-height: 1;
 }
 .ipynb-renderer-root .dropdown-menu:hover {
@@ -971,7 +967,7 @@ http://ethanschoonover.com/solarized
   padding: 0px;
   text-align: left;
   border: none;
-  background-color: #f5f2e7;
+  background-color: #dedede;
   box-shadow: none;
   line-height: 1;
 }
@@ -980,23 +976,23 @@ http://ethanschoonover.com/solarized
   font-size: 12pt;
   display: block;
   padding: 10px 20px 9px 10px;
-  color: #586e75;
-  background-color: #f5f2e7;
-  background: #f5f2e7;
+  color: #303030;
+  background-color: #dedede;
+  background: #dedede;
 }
 .ipynb-renderer-root .dropdown-menu > li > a:hover,
 .ipynb-renderer-root .dropdown-menu > li > a:focus {
-  color: #47585e;
-  background-color: #efeada;
-  background: #efeada;
-  border-color: #efeada;
+  color: #2f2f2f;
+  background-color: #d4d4d4;
+  background: #d4d4d4;
+  border-color: #d4d4d4;
   transition: 200ms ease;
 }
 .ipynb-renderer-root .dropdown-menu .divider {
   height: 1px;
   margin: 0px 0px;
   overflow: hidden;
-  background-color: #e1d6b4;
+  background-color: rgba(180, 180, 180, 0.3);
 }
 .ipynb-renderer-root .dropdown-submenu > .dropdown-menu {
   display: none;
@@ -1013,14 +1009,14 @@ http://ethanschoonover.com/solarized
   font-family: sans-serif;
   font-size: 12pt;
   font-weight: normal;
-  color: #93a1a1;
+  color: #828892;
   padding: none;
   display: block;
   clear: both;
   white-space: nowrap;
 }
 .ipynb-renderer-root .dropdown-submenu > a:after {
-  color: #586e75;
+  color: #303030;
   margin-right: -16px;
   margin-top: 0px;
   display: inline-block;
@@ -1029,7 +1025,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .dropdown-submenu:active > a:after,
 .ipynb-renderer-root .dropdown-submenu:focus > a:after,
 .ipynb-renderer-root .dropdown-submenu:visited > a:after {
-  color: #93a1a1;
+  color: #ff7823;
   margin-right: -16px;
   display: inline-block !important;
 }
@@ -1041,10 +1037,10 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .btn,
 .ipynb-renderer-root .btn-default {
   font-family: sans-serif;
-  color: #586e75;
-  background: #d2d8d8;
-  background-color: #d2d8d8;
-  border: 2px solid #d2d8d8;
+  color: #303030;
+  background: #e5e5e5;
+  background-color: #e5e5e5;
+  border: 2px solid #e5e5e5;
   font-weight: normal;
   box-shadow: none;
   text-shadow: none;
@@ -1057,10 +1053,10 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .btn-default:hover,
 .ipynb-renderer-root .open > .dropdown-toggle.btn-default:hover,
 .ipynb-renderer-root .open > .dropdown-toggle.btn:hover {
-  color: #51666c;
-  border: 2px solid #cdd3d3;
-  background-color: #cdd3d3;
-  background: #cdd3d3;
+  color: #ef5c00;
+  border: 2px solid #e0e0e0;
+  background-color: #e0e0e0;
+  background: #e0e0e0;
   background-image: none;
   box-shadow: none !important;
   border-radius: 3px;
@@ -1087,10 +1083,10 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .open > .dropdown-toggle.btn-default:focus,
 .ipynb-renderer-root .open > .dropdown-toggle.btn-default.hover,
 .ipynb-renderer-root .open > .dropdown-toggle.btn-default.focus {
-  color: #51666c;
-  border: 2px solid #cdd3d3;
-  background-color: #cdd3d3 !important;
-  background: #cdd3d3 !important;
+  color: #ef5c00;
+  border: 2px solid #e0e0e0;
+  background-color: #e0e0e0 !important;
+  background: #e0e0e0 !important;
   background-image: none;
   box-shadow: none !important;
   border-radius: 3px;
@@ -1101,9 +1097,9 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .btn-default.active:focus,
 .ipynb-renderer-root .btn-default:active.focus,
 .ipynb-renderer-root .btn-default.active.focus {
-  color: #cb4b16 !important;
-  background-color: #d2d8d8;
-  border-color: #93573e !important;
+  color: #ef5c00 !important;
+  background-color: #e5e5e5;
+  border-color: #ffccac !important;
   transition: 2000ms ease;
 }
 .ipynb-renderer-root .btn:focus,
@@ -1114,12 +1110,12 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .btn.active,
 .ipynb-renderer-root .btn:active.focus,
 .ipynb-renderer-root .btn.active.focus {
-  color: #cb4b16 !important;
+  color: #ef5c00 !important;
   outline: none !important;
   outline-width: 0px !important;
-  background: #93573e !important;
-  background-color: #93573e !important;
-  border-color: #93573e !important;
+  background: #ffccac !important;
+  background-color: #ffccac !important;
+  border-color: #ffccac !important;
   transition: 200ms ease !important;
 }
 .ipynb-renderer-root .item_buttons > .btn,
@@ -1128,7 +1124,7 @@ http://ethanschoonover.com/solarized
   font-size: 13pt;
   background: transparent;
   background-color: transparent;
-  border: 0px solid #e8e0c7;
+  border: 0px solid #e4e4e4;
   border-bottom: 2px solid transparent;
   margin-left: 5px;
   padding-top: 4px !important;
@@ -1141,11 +1137,11 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .item_buttons > .input-group.active,
 .ipynb-renderer-root .item_buttons > .btn.focus {
   margin-left: 5px;
-  background: #e5dcc0;
+  background: #dfdfdf;
   padding-top: 4px !important;
   background-color: transparent;
   border: 0px solid transparent;
-  border-bottom: 2px solid #93a1a1;
+  border-bottom: 2px solid #ff7823;
   border-radius: 0px;
   transition: none;
 }
@@ -1224,7 +1220,7 @@ http://ethanschoonover.com/solarized
   vertical-align: bottom;
   margin-left: -0.5ex;
   display: inline-table;
-  border: solid 0px #d2d8d8;
+  border: solid 0px #e5e5e5;
   margin-bottom: -1ex;
 }
 .ipynb-renderer-root .alternate_upload .btn-upload {
@@ -1248,7 +1244,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .dropdown-header {
   font-family: sans-serif !important;
   font-size: 13pt !important;
-  color: #93a1a1 !important;
+  color: #ff7823 !important;
   border-bottom: none !important;
   padding: 0px !important;
   margin: 6px 6px 0px !important;
@@ -1261,7 +1257,7 @@ http://ethanschoonover.com/solarized
   background-color: transparent;
   background: transparent;
   border: none;
-  color: #586e75;
+  color: #303030;
   padding-bottom: 0px;
   margin-bottom: 0px;
   vertical-align: sub;
@@ -1281,13 +1277,13 @@ http://ethanschoonover.com/solarized
   width: 100%;
 }
 .ipynb-renderer-root .close {
-  color: #dc322f;
+  color: #de143d;
   opacity: 0.5;
   text-shadow: none;
   font-weight: normal;
 }
 .ipynb-renderer-root .close:hover {
-  color: #dc322f;
+  color: #de143d;
   opacity: 1;
   font-weight: normal;
 }
@@ -1304,10 +1300,10 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .btn-default.disabled.focus,
 .ipynb-renderer-root .btn-default[disabled].focus,
 .ipynb-renderer-root fieldset[disabled] .btn-default.focus {
-  color: #93a1a1;
-  background: #cfd6d6;
-  background-color: #cfd6d6;
-  border-color: #cfd6d6;
+  color: #4a4a4a;
+  background: #e3e3e3;
+  background-color: #e3e3e3;
+  border-color: #e3e3e3;
   transition: 200ms ease;
 }
 .ipynb-renderer-root .input-group-addon {
@@ -1315,7 +1311,7 @@ http://ethanschoonover.com/solarized
   font-size: 13pt;
   font-weight: normal;
   height: auto;
-  color: #586e75;
+  color: #303030;
   text-align: center;
   background-color: transparent;
   border: 2px solid transparent !important;
@@ -1331,25 +1327,25 @@ http://ethanschoonover.com/solarized
   height: 100%;
 }
 .ipynb-renderer-root .btn-group > .btn + .dropdown-toggle:hover {
-  background: #cdd3d3 !important;
+  background: #e0e0e0 !important;
 }
 .ipynb-renderer-root .input-group-btn {
   position: relative;
   font-size: inherit;
   white-space: nowrap;
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
   border: none;
 }
 .ipynb-renderer-root .input-group-btn:hover {
-  background: #e5dcc0;
-  background-color: #e5dcc0;
+  background: #dfdfdf;
+  background-color: #dfdfdf;
   border: none;
 }
 .ipynb-renderer-root .input-group-btn:first-child > .btn,
 .ipynb-renderer-root .input-group-btn:first-child > .btn-group {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
   border: none;
   margin-left: 2px;
   margin-right: -1px;
@@ -1357,45 +1353,45 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .input-group-btn:first-child > .btn:hover,
 .ipynb-renderer-root .input-group-btn:first-child > .btn-group:hover {
-  background: #cdd3d3;
-  background-color: #cdd3d3;
+  background: #e0e0e0;
+  background-color: #e0e0e0;
   border: none;
   font-size: inherit;
   transition: 200ms ease;
 }
 .ipynb-renderer-root div.modal .btn-group > .btn:first-child {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
-  border: 1px solid #e7dec3;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
+  border: 1px solid #e1e1e1;
   margin-top: 0px !important;
   margin-left: 0px;
   margin-bottom: 2px;
 }
 .ipynb-renderer-root div.modal .btn-group > .btn:first-child:hover {
-  background: #e5dcc0;
-  background-color: #e5dcc0;
-  border: 1px solid #e5dcc0;
+  background: #dfdfdf;
+  background-color: #dfdfdf;
+  border: 1px solid #dfdfdf;
   transition: 200ms ease;
 }
 .ipynb-renderer-root div.modal > button,
 .ipynb-renderer-root div.modal-footer > button {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
-  border-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
+  border-color: #e4e4e4;
 }
 .ipynb-renderer-root div.modal > button:hover,
 .ipynb-renderer-root div.modal-footer > button:hover {
-  background: #e5dcc0;
-  background-color: #e5dcc0;
-  border-color: #e5dcc0;
+  background: #dfdfdf;
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
   transition: 200ms ease;
 }
 .ipynb-renderer-root .modal-content {
   font-family: sans-serif;
   font-size: 12pt;
   position: relative;
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
   border: none;
   border-radius: 1px;
   background-clip: padding-box;
@@ -1404,17 +1400,17 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .modal-header {
   font-family: sans-serif;
   font-size: 13pt;
-  color: #586e75;
-  background: #e8e0c7;
-  background-color: #e8e0c7;
-  border-color: #e4dabd;
+  color: #303030;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
+  border-color: #dedede;
   padding: 12px;
   min-height: 16.4286px;
 }
 .ipynb-renderer-root .modal-content h4 {
   font-family: sans-serif;
   font-size: 16pt;
-  color: #586e75;
+  color: #303030;
   padding: 5px;
 }
 .ipynb-renderer-root .modal-body {
@@ -1430,8 +1426,8 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .alert-info {
   background-color: #fdfdfd;
-  border-color: #e4dabd;
-  color: #586e75;
+  border-color: #dedede;
+  color: #303030;
 }
 .ipynb-renderer-root .modal-header .close {
   margin-top: -5px;
@@ -1448,8 +1444,8 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .panel-default {
   font-family: sans-serif;
   font-size: 13pt;
-  background-color: #f2eee1;
-  color: #586e75;
+  background-color: #f4f4f4;
+  color: #303030;
   margin-bottom: 14px;
   border: 0;
   box-shadow: none;
@@ -1457,9 +1453,9 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.panel > .panel-heading,
 .ipynb-renderer-root div.panel-default > .panel-heading {
   font-size: 14pt;
-  color: #586e75;
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  color: #303030;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
   border: 0;
 }
 .ipynb-renderer-root .modal .modal-dialog {
@@ -1476,9 +1472,9 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .form-control {
   font-family: sans-serif;
   font-size: initial;
-  color: #586e75;
+  color: #303030;
   background-color: #ffffff;
-  border: 1px solid #efefef !important;
+  border: 1px solid #d0d0d0 !important;
   margin-left: 2px;
   box-shadow: none;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -1488,9 +1484,9 @@ http://ethanschoonover.com/solarized
   height: inherit;
 }
 .ipynb-renderer-root .form-group.list-group-item {
-  color: #586e75;
-  background-color: #f2eee1;
-  border-color: #e4dabd;
+  color: #303030;
+  background-color: #f4f4f4;
+  border-color: #dedede;
   margin-bottom: 0px;
 }
 .ipynb-renderer-root .form-group .input-group {
@@ -1502,7 +1498,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root textarea {
   background-color: #ffffff;
   font-weight: normal;
-  border: 1px solid #e4dabd;
+  border: 1px solid #dedede;
 }
 .ipynb-renderer-root select.form-control.select-xs {
   height: 30px;
@@ -1518,44 +1514,44 @@ http://ethanschoonover.com/solarized
   font-size: 92%;
   margin-left: 10px;
   padding: 0px;
-  background: #d2d8d8 !important;
-  background-color: #d2d8d8 !important;
-  border: 2px solid #cfd6d6 !important;
+  background: #e5e5e5 !important;
+  background-color: #e5e5e5 !important;
+  border: 2px solid #e5e5e5 !important;
 }
 .ipynb-renderer-root .toolbar .btn {
   padding: 3px 8px;
 }
 .ipynb-renderer-root .form-control:focus {
-  border-color: #93a1a1;
-  outline: 2px solid #bbc4c5;
+  border-color: #ff7823;
+  outline: 2px solid rgba(240, 147, 43, 0.5);
   -webkit-box-shadow: none;
 }
 .ipynb-renderer-root ::-webkit-input-placeholder {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root ::-moz-placeholder {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root :-ms-input-placeholder {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root :-moz-placeholder {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root
   [dir='ltr']
   #find-and-replace
   .input-group-btn
   + .form-control {
-  border: 2px solid #e4dabd !important;
+  border: 2px solid #dedede !important;
 }
 .ipynb-renderer-root
   [dir='ltr']
   #find-and-replace
   .input-group-btn
   + .form-control:focus {
-  border-color: #93a1a1;
-  outline: 2px solid #bbc4c5;
+  border-color: #ff7823;
+  outline: 2px solid rgba(240, 147, 43, 0.5);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1565,12 +1561,12 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root ::-webkit-scrollbar {
   width: 11px;
   max-height: 9px;
-  background-color: #e1d5b6;
+  background-color: #ebebeb;
   border-radius: 3px;
   border: none;
 }
 .ipynb-renderer-root ::-webkit-scrollbar-track {
-  background: #e1d5b6;
+  background: #ebebeb;
   border: none;
   width: 11px;
   max-height: 9px;
@@ -1578,7 +1574,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   border: none;
-  background: #93a1a1;
+  background: #909090;
   background-clip: content-box;
   width: 11px;
 }
@@ -1643,37 +1639,37 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .rendered_html thead {
   font-family: sans-serif !important;
   font-size: 9.4pt !important;
-  background: lightgray;
+  background: #ebebeb;
   color: #353535;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #ebebeb;
   vertical-align: bottom;
 }
 .ipynb-renderer-root .rendered_html tbody tr:nth-child(odd) {
-  background: lightgray;
+  background: #fafafa;
 }
 .ipynb-renderer-root .rendered_html tbody tr {
-  background: #eae2ca;
+  background: #f2f2f2;
 }
 .ipynb-renderer-root .rendered_html tbody tr:hover:nth-child(odd) {
-  background: #ede6d1;
+  background: #f7f7f7;
 }
 .ipynb-renderer-root .rendered_html tbody tr:hover {
-  background: #e8e0c6;
+  background: #f0f0f0;
 }
 .ipynb-renderer-root .rendered_html * + table {
   margin-top: 0.05em;
 }
 .ipynb-renderer-root div.widget-area {
-  background-color: lightgray;
-  background: lightgray;
-  color: #586e75;
+  background-color: #ffffff;
+  background: #ffffff;
+  color: #303030;
 }
 .ipynb-renderer-root div.widget-area a {
   font-family: sans-serif;
   font-size: 12pt;
   font-weight: normal;
   font-style: normal;
-  color: #586e75;
+  color: #303030;
   text-shadow: none !important;
 }
 .ipynb-renderer-root div.widget-area a:hover,
@@ -1682,9 +1678,9 @@ http://ethanschoonover.com/solarized
   font-size: 12pt;
   font-weight: normal;
   font-style: normal;
-  color: #47585e;
-  background: #eae2ca;
-  background-color: #eae2ca;
+  color: #2f2f2f;
+  background: rgba(180, 180, 180, 0.14);
+  background-color: rgba(180, 180, 180, 0.14);
   border-color: transparent;
   background-image: none;
   text-shadow: none !important;
@@ -1695,9 +1691,9 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root
   div.widget_item.btn-group
   > button.btn.btn-default.widget-combo-btn:hover {
-  background: #e7dec3;
-  background-color: #e7dec3;
-  border: 2px solid #e7dec3 !important;
+  background: #e1e1e1;
+  background-color: #e1e1e1;
+  border: 2px solid #e1e1e1 !important;
   font-size: inherit;
   z-index: 0;
 }
@@ -1718,7 +1714,7 @@ http://ethanschoonover.com/solarized
   max-width: 240px !important;
   min-width: 100px !important;
   vertical-align: text-top !important;
-  color: #586e75 !important;
+  color: #303030 !important;
   font-size: 14px !important;
 }
 .ipynb-renderer-root .widget-hprogress .progress {
@@ -1741,16 +1737,16 @@ http://ethanschoonover.com/solarized
   z-index: 10;
 }
 .ipynb-renderer-root .progress-bar-danger {
-  background-color: #dc322f !important;
+  background-color: #e5344a !important;
 }
 .ipynb-renderer-root .progress-bar-info {
-  background-color: #268bd2 !important;
+  background-color: #2980b9 !important;
 }
 .ipynb-renderer-root .progress-bar-warning {
-  background-color: #b58900 !important;
+  background-color: #f39c12 !important;
 }
 .ipynb-renderer-root .progress-bar-success {
-  background-color: #859900 !important;
+  background-color: #5cb85c !important;
 }
 .ipynb-renderer-root .widget-select select {
   margin-left: 12px;
@@ -1758,19 +1754,19 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .rendered_html :link {
   font-family: sans-serif;
   font-size: 100%;
-  color: #93a1a1;
+  color: #ff7823;
   text-decoration: underline;
 }
 .ipynb-renderer-root .rendered_html :visited,
 .ipynb-renderer-root .rendered_html :visited:active,
 .ipynb-renderer-root .rendered_html :visited:focus {
-  color: #a2a6a6;
+  color: #fa863c;
 }
 .ipynb-renderer-root .rendered_html :visited:hover,
 .ipynb-renderer-root .rendered_html :link:hover {
   font-family: sans-serif;
   font-size: 100%;
-  color: #6ba0a0;
+  color: #f96000;
 }
 .ipynb-renderer-root div.cell.text_cell a.anchor-link:link {
   font-size: inherit;
@@ -1788,12 +1784,12 @@ http://ethanschoonover.com/solarized
   margin-bottom: 0px;
 }
 .ipynb-renderer-root #clusters > a {
-  color: #859900;
+  color: #ef5c00;
   text-decoration: underline;
   cursor: auto;
 }
 .ipynb-renderer-root #clusters > a:hover {
-  color: #268bd2;
+  color: #126dce;
   text-decoration: underline;
   cursor: auto;
 }
@@ -1822,8 +1818,8 @@ http://ethanschoonover.com/solarized
   background: transparent;
 }
 .ipynb-renderer-root div.nbext-selector > nav > .nav > li:hover {
-  background-color: #eae2ca !important;
-  background: #eae2ca !important;
+  background-color: rgba(180, 180, 180, 0.14) !important;
+  background: rgba(180, 180, 180, 0.14) !important;
 }
 .ipynb-renderer-root div.nbext-selector > nav > .nav > li.active:hover {
   background: transparent !important;
@@ -1833,9 +1829,9 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .nav-pills > li.active > a:active,
 .ipynb-renderer-root .nav-pills > li.active > a:hover,
 .ipynb-renderer-root .nav-pills > li.active > a:focus {
-  color: #cb4b16;
-  background-color: #eae2ca !important;
-  background: #eae2ca !important;
+  color: #1c1c1c;
+  background-color: rgba(180, 180, 180, 0.14) !important;
+  background: rgba(180, 180, 180, 0.14) !important;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased !important;
 }
@@ -1847,8 +1843,8 @@ http://ethanschoonover.com/solarized
   font-size: 11.5pt;
   line-height: 145%;
   padding: 1em 1em;
-  color: #586e75;
-  background-color: white;
+  color: #353535;
+  background-color: #ededed;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1869,20 +1865,20 @@ http://ethanschoonover.com/solarized
   margin-top: 0.5em;
   margin-bottom: 2em;
   border: none;
-  border-top-color: #e1d6b4;
+  border-top-color: #828892;
 }
 .ipynb-renderer-root .nbext-showhide-incompat {
   padding-bottom: 0.5em;
-  color: #93a1a1;
+  color: #4a4a4a;
   font-size: 10.5pt;
 }
 .ipynb-renderer-root .nbext-filter-menu.dropdown-menu > li > a:hover,
 .ipynb-renderer-root .nbext-filter-menu.dropdown-menu > li > a:focus,
 .ipynb-renderer-root .nbext-filter-menu.dropdown-menu > li > a.ui-state-focus {
-  color: #47585e !important;
-  background-color: #efeada !important;
-  background: #efeada !important;
-  border-color: #efeada !important;
+  color: #2f2f2f !important;
+  background-color: #d4d4d4 !important;
+  background: #d4d4d4 !important;
+  border-color: #d4d4d4 !important;
 }
 .ipynb-renderer-root .nbext-filter-input-wrap > .nbext-filter-input-subwrap,
 .ipynb-renderer-root
@@ -1898,7 +1894,7 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root span.rendered_html code {
   background-color: transparent;
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root
   #nbextensions-configurator-container
@@ -1916,14 +1912,14 @@ http://ethanschoonover.com/solarized
   border: none;
 }
 .ipynb-renderer-root .alert-warning {
-  background-color: #f2eee1;
-  border-color: #f2eee1;
-  color: #586e75;
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
+  color: #303030;
 }
 .ipynb-renderer-root .notification_widget.danger {
   color: #fff;
-  background-color: #dc322f;
-  border-color: #dc322f;
+  background-color: #e5344a;
+  border-color: #e5344a;
   padding-right: 5px;
 }
 .ipynb-renderer-root
@@ -1938,56 +1934,56 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root mark,
 .ipynb-renderer-root .mark {
-  background-color: white;
-  color: #586e75;
+  background-color: #ededed;
+  color: #353535;
   padding: 0.15em;
 }
 .ipynb-renderer-root a.text-warning,
 .ipynb-renderer-root a.text-warning:hover {
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root a.text-warning.bg-warning {
-  background-color: lightgray;
+  background-color: #ffffff;
 }
 .ipynb-renderer-root span.bg-success.text-success {
   background-color: transparent;
-  color: #859900;
+  color: #009e07;
 }
 .ipynb-renderer-root span.bg-danger.text-danger {
-  background-color: lightgray;
-  color: #dc322f;
+  background-color: #ffffff;
+  color: #de143d;
 }
 .ipynb-renderer-root .has-success .input-group-addon {
-  color: #859900;
+  color: #009e07;
   border-color: transparent;
   background: inherit;
   background-color: rgba(83, 180, 115, 0.1);
 }
 .ipynb-renderer-root .has-success .form-control {
-  border-color: #859900;
+  border-color: #009e07;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.025);
 }
 .ipynb-renderer-root .has-error .input-group-addon {
-  color: #dc322f;
+  color: #de143d;
   border-color: transparent;
   background: inherit;
   background-color: rgba(192, 57, 67, 0.1);
 }
 .ipynb-renderer-root .has-error .form-control {
-  border-color: #dc322f;
+  border-color: #de143d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.025);
 }
 .ipynb-renderer-root .kse-input-group-pretty > kbd {
   font-family: monospace, monospace;
-  color: #586e75;
+  color: #303030;
   font-weight: normal;
   background: transparent;
 }
 .ipynb-renderer-root .kse-input-group-pretty > kbd {
   font-family: monospace, monospace;
-  color: #586e75;
+  color: #303030;
   font-weight: normal;
   background: transparent;
 }
@@ -1995,26 +1991,26 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.nbext-enable-btns .btn[disabled]:hover,
 .ipynb-renderer-root .btn-default.disabled,
 .ipynb-renderer-root .btn-default[disabled] {
-  background: #cfd6d6;
-  background-color: #cfd6d6;
-  color: #51666c;
+  background: #e3e3e3;
+  background-color: #e3e3e3;
+  color: #282828;
 }
 .ipynb-renderer-root label#Keyword-Filter {
   display: none;
 }
 .ipynb-renderer-root .input-group .nbext-list-btn-add,
 .ipynb-renderer-root .input-group-btn:last-child > .btn-group > .btn {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
-  border-color: #e8e0c7;
-  border: 2px solid #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
+  border-color: #e4e4e4;
+  border: 2px solid #e4e4e4;
 }
 .ipynb-renderer-root .input-group .nbext-list-btn-add:hover,
 .ipynb-renderer-root .input-group-btn:last-child > .btn-group > .btn:hover {
-  background: #e5dcc0;
-  background-color: #e5dcc0;
-  border-color: #e5dcc0;
-  border: 2px solid #e5dcc0;
+  background: #dfdfdf;
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
+  border: 2px solid #dfdfdf;
 }
 .ipynb-renderer-root
   #notebook-container
@@ -2024,9 +2020,9 @@ http://ethanschoonover.com/solarized
   > div
   > div.widget_item.btn-group
   > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
-  border-color: #e8e0c7;
+  background: #e4e4e4;
+  background-color: #e4e4e4;
+  border-color: #e4e4e4;
 }
 .ipynb-renderer-root
   #notebook-container
@@ -2036,21 +2032,21 @@ http://ethanschoonover.com/solarized
   > div
   > div.widget_item.btn-group
   > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn:hover {
-  background: #e5dcc0;
-  background-color: #e5dcc0;
-  border-color: #e5dcc0;
+  background: #dfdfdf;
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
 }
 .ipynb-renderer-root .ui-widget-content {
-  background: #d2d8d8;
-  background-color: #d2d8d8;
-  border: 2px solid #d2d8d8;
-  color: #586e75;
+  background: #e5e5e5;
+  background-color: #e5e5e5;
+  border: 2px solid #e5e5e5;
+  color: #303030;
 }
 .ipynb-renderer-root div.collapsible_headings_toggle {
-  color: #e1d6b4 !important;
+  color: rgba(180, 180, 180, 0.3) !important;
 }
 .ipynb-renderer-root div.collapsible_headings_toggle:hover {
-  color: #93a1a1 !important;
+  color: #ff7823 !important;
 }
 .ipynb-renderer-root .collapsible_headings_toggle .h1,
 .ipynb-renderer-root .collapsible_headings_toggle .h2,
@@ -2095,7 +2091,7 @@ http://ethanschoonover.com/solarized
   right: 0;
   bottom: 20% !important;
   content: '[\002026]';
-  color: #e1d6b4 !important;
+  color: rgba(180, 180, 180, 0.3) !important;
   padding: 0.5em 0em 0em 0em !important;
 }
 .ipynb-renderer-root .collapsible_headings_ellipsis .rendered_html h1,
@@ -2123,34 +2119,34 @@ http://ethanschoonover.com/solarized
   border-style: solid;
   border-width: thin;
   border-right-width: medium !important;
-  background-color: lightgray !important;
+  background-color: #ffffff !important;
 }
 .ipynb-renderer-root #toc-wrapper.ui-draggable.ui-resizable.sidebar-wrapper {
-  border-color: #eae2ca !important;
+  border-color: rgba(180, 180, 180, 0.14) !important;
 }
 .ipynb-renderer-root #toc a,
 .ipynb-renderer-root #navigate_menu a,
 .ipynb-renderer-root .toc {
-  color: #586e75 !important;
+  color: #303030 !important;
   font-size: 11 !important;
 }
 .ipynb-renderer-root #toc li > span:hover {
-  background-color: #efeada !important;
+  background-color: #d4d4d4 !important;
 }
 .ipynb-renderer-root #toc a:hover,
 .ipynb-renderer-root #navigate_menu a:hover,
 .ipynb-renderer-root .toc {
-  color: #cb4b16 !important;
+  color: #1c1c1c !important;
   font-size: 11 !important;
 }
 .ipynb-renderer-root #toc-wrapper .toc-item-num {
-  color: #93a1a1 !important;
+  color: #ff7823 !important;
   font-size: 11 !important;
 }
 .ipynb-renderer-root input.raw_input {
   font-family: monospace, monospace;
   font-size: 11 !important;
-  color: #586e75;
+  color: #303030;
   background-color: #efefef;
   border-color: #ececec;
   background: #ececec;
@@ -2173,18 +2169,18 @@ http://ethanschoonover.com/solarized
   margin: 0px;
 }
 .ipynb-renderer-root .cmd-palette form {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e5e5e5;
+  background-color: #e5e5e5;
 }
 .ipynb-renderer-root .typeahead-field input:last-child,
 .ipynb-renderer-root .typeahead-hint {
-  background: #e8e0c7;
-  background-color: #e8e0c7;
+  background: #e5e5e5;
+  background-color: #e5e5e5;
   z-index: 1;
 }
 .ipynb-renderer-root .typeahead-field input {
   font-family: sans-serif;
-  color: #586e75;
+  color: #303030;
   border: none;
   font-size: 28pt;
   display: inline-block;
@@ -2193,17 +2189,17 @@ http://ethanschoonover.com/solarized
   height: 70px;
 }
 .ipynb-renderer-root .typeahead-select {
-  background-color: #e8e0c7;
+  background-color: #e5e5e5;
 }
 .ipynb-renderer-root body > div.modal.cmd-palette.typeahead-field {
   display: table;
   border-collapse: separate;
-  background-color: #f2eee1;
+  background-color: #f4f4f4;
 }
 .ipynb-renderer-root .typeahead-container button {
   font-family: sans-serif;
   font-size: 28pt;
-  background-color: #e8e0c7;
+  background-color: #e4e4e4;
   border: none;
   display: inline-block;
   line-height: inherit;
@@ -2219,9 +2215,9 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .typeahead-container button:focus,
 .ipynb-renderer-root .typeahead-container button:hover {
-  color: #47585e;
-  background-color: #e5dcc0;
-  border-color: #cdd3d3;
+  color: #2f2f2f;
+  background-color: #dfdfdf;
+  border-color: #e0e0e0;
 }
 .ipynb-renderer-root .typeahead-list > li.typeahead-group.active > a,
 .ipynb-renderer-root .typeahead-list > li.typeahead-group > a,
@@ -2231,14 +2227,14 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .typeahead-dropdown > li > a,
 .ipynb-renderer-root .typeahead-list > li > a {
-  color: #586e75;
+  color: #303030;
   text-decoration: none;
 }
 .ipynb-renderer-root .typeahead-dropdown,
 .ipynb-renderer-root .typeahead-list {
   font-family: sans-serif;
   font-size: 13pt;
-  color: #586e75;
+  color: #303030;
   background-color: #ffffff;
   border: none;
   background-clip: padding-box;
@@ -2252,19 +2248,19 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .typeahead-list > li.active > a,
 .ipynb-renderer-root .typeahead-list > li > a:focus,
 .ipynb-renderer-root .typeahead-list > li > a:hover {
-  color: #47585e;
-  background-color: #f2eee1;
-  border-color: #f2eee1;
+  color: #2f2f2f;
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
 }
 .ipynb-renderer-root .command-shortcut:before {
   content: '(command)';
   padding-right: 3px;
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root .edit-shortcut:before {
   content: '(edit)';
   padding-right: 3px;
-  color: #93a1a1;
+  color: #828892;
 }
 .ipynb-renderer-root ul.typeahead-list i {
   margin-left: 1px;
@@ -2292,7 +2288,7 @@ http://ethanschoonover.com/solarized
   > div.typeahead-field
   > span.typeahead-query
   > input.typeahead-hint {
-  color: #93a1a1 !important;
+  color: #828892 !important;
   background-color: transparent;
   padding: 3px 10px;
 }
@@ -2304,7 +2300,7 @@ http://ethanschoonover.com/solarized
   font-weight: 400;
   line-height: 1.7;
   border: 1px solid #ffffff;
-  border-bottom-color: #e1d6b4;
+  border-bottom-color: rgba(180, 180, 180, 0.3);
 }
 .ipynb-renderer-root body > div.modal.cmd-palette.in > div {
   min-width: 750px;
@@ -2312,32 +2308,32 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .typeahead-container strong {
   font-weight: bolder;
-  color: #93a1a1;
+  color: #ff7823;
 }
 .ipynb-renderer-root #find-and-replace #replace-preview .match,
 .ipynb-renderer-root #find-and-replace #replace-preview .insert {
   color: #fff;
-  background-color: #93a1a1;
-  border-color: #93a1a1;
+  background-color: #ff7823;
+  border-color: #ff7823;
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
 }
 .ipynb-renderer-root #find-and-replace #replace-preview .replace .match {
-  background-color: #dc322f;
-  border-color: #dc322f;
+  background-color: #de143d;
+  border-color: #de143d;
   border-radius: 0px;
 }
 .ipynb-renderer-root #find-and-replace #replace-preview .replace .insert {
-  background-color: #859900;
-  border-color: #859900;
+  background-color: #009e07;
+  border-color: #009e07;
   border-radius: 0px;
 }
 .ipynb-renderer-root .jupyter-dashboard-menu-item.selected::before {
   font-family: 'FontAwesome' !important;
   content: '\f00c' !important;
   position: absolute !important;
-  color: #93a1a1 !important;
+  color: #ff7823 !important;
   left: 0px !important;
   top: 13px !important;
   font-size: 12px !important;
@@ -2352,7 +2348,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .jupyter-keybindings {
   padding: 1px;
   line-height: 24px;
-  border-bottom: 1px solid #eae2ca;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.14);
 }
 .ipynb-renderer-root .jupyter-keybindings i {
   background: #efefef;
@@ -2362,16 +2358,16 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div#short-key-bindings-intro.well,
 .ipynb-renderer-root .well {
-  background-color: #e8e0c7;
-  border: 1px solid #e8e0c7;
-  color: #586e75;
+  background-color: #e4e4e4;
+  border: 1px solid #e4e4e4;
+  color: #303030;
   border-radius: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ipynb-renderer-root #texteditor-backdrop {
-  background: lightgray;
-  background-color: lightgray;
+  background: #ffffff;
+  background-color: #ffffff;
 }
 .ipynb-renderer-root
   #texteditor-backdrop
@@ -2381,103 +2377,103 @@ http://ethanschoonover.com/solarized
   #texteditor-backdrop
   #texteditor-container
   .CodeMirror-gutters {
-  background: #dfe3e3;
-  background-color: #dfe3e3;
-  color: #657b83;
+  background: #e0e1e3;
+  background-color: #e0e1e3;
+  color: #828892;
 }
 .ipynb-renderer-root .edit_app #menubar .navbar {
   margin-bottom: 0px;
 }
 .ipynb-renderer-root #texteditor-backdrop #texteditor-container {
   padding: 0px;
-  background-color: white;
+  background-color: #ededed;
   box-shadow: none;
 }
 .ipynb-renderer-root .terminal-app {
-  background: lightgray;
+  background: #ffffff;
 }
 .ipynb-renderer-root .terminal-app > #header {
-  background: lightgray;
+  background: #ffffff;
 }
 .ipynb-renderer-root .terminal-app .terminal {
   font-family: monospace, monospace;
   font-size: 11;
   line-height: 170%;
-  color: #586e75;
-  background: white;
+  color: #303030;
+  background: #ededed;
   padding: 0.4em;
   border-radius: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ipynb-renderer-root .terminal .xterm-viewport {
-  background-color: white;
-  color: #586e75;
+  background-color: #ededed;
+  color: #303030;
   overflow-y: auto;
 }
 .ipynb-renderer-root .terminal .xterm-color-0 {
-  color: #93a1a1;
+  color: #ff7823;
 }
 .ipynb-renderer-root .terminal .xterm-color-1 {
-  color: #d33682;
+  color: #de143d;
 }
 .ipynb-renderer-root .terminal .xterm-color-2 {
-  color: #859900;
+  color: #713bc5;
 }
 .ipynb-renderer-root .terminal .xterm-color-3 {
-  color: #d33682;
+  color: #e22978;
 }
 .ipynb-renderer-root .terminal .xterm-color-4 {
-  color: #268bd2;
+  color: #ff8132;
 }
 .ipynb-renderer-root .terminal .xterm-color-5 {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root .terminal .xterm-color-6 {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .terminal .xterm-color-7 {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .terminal .xterm-color-8 {
-  color: #859900;
+  color: #ef5c00;
 }
 .ipynb-renderer-root .terminal .xterm-color-9 {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root .terminal .xterm-color-10 {
-  color: #d33682;
+  color: #e22978;
 }
 .ipynb-renderer-root .terminal .xterm-color-14 {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .terminal .xterm-bg-color-15 {
-  background-color: white;
+  background-color: #ededed;
 }
 .ipynb-renderer-root
   .terminal:not(.xterm-cursor-style-underline):not(.xterm-cursor-style-bar)
   .terminal-cursor {
-  background-color: #93a1a1;
-  color: white;
+  background-color: #ff7823;
+  color: #ededed;
 }
 .ipynb-renderer-root .terminal:not(.focus) .terminal-cursor {
-  outline: 1px solid #93a1a1;
+  outline: 1px solid #ff7823;
   outline-offset: -1px;
 }
 .ipynb-renderer-root .celltoolbar {
   font-size: 100%;
   padding-top: 3px;
   border-color: transparent;
-  border-bottom: thin solid #e1d6b4;
+  border-bottom: thin solid #828892;
   background: transparent;
 }
 .ipynb-renderer-root .cell-tag,
 .ipynb-renderer-root .tags-input input,
 .ipynb-renderer-root .tags-input button {
-  color: #586e75;
-  background-color: lightgray;
+  color: #303030;
+  background-color: #ffffff;
   background-image: none;
-  border: 1px solid #586e75;
+  border: 1px solid #303030;
   border-radius: 1px;
   box-shadow: none;
   width: inherit;
@@ -2503,10 +2499,10 @@ http://ethanschoonover.com/solarized
   > div
   > button {
   font-size: 10pt;
-  color: #586e75;
-  background-color: lightgray;
+  color: #303030;
+  background-color: #ffffff;
   background-image: none;
-  border: 1px solid #586e75;
+  border: 1px solid #303030;
   border-radius: 1px;
   box-shadow: none;
   width: inherit;
@@ -2515,25 +2511,25 @@ http://ethanschoonover.com/solarized
   line-height: 22px;
 }
 .ipynb-renderer-root div#pager #pager-contents {
-  background: lightgray !important;
-  background-color: lightgray !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 .ipynb-renderer-root div#pager pre {
-  color: #586e75 !important;
-  background: white !important;
-  background-color: white !important;
+  color: #303030 !important;
+  background: #ededed !important;
+  background-color: #ededed !important;
   padding: 0.4em;
 }
 .ipynb-renderer-root div#pager .ui-resizable-handle {
   top: 0px;
   height: 8px;
-  background: #93a1a1 !important;
-  border-top: 1px solid #93a1a1;
-  border-bottom: 1px solid #93a1a1;
+  background: #ff7823 !important;
+  border-top: 1px solid #ff7823;
+  border-bottom: 1px solid #ff7823;
 }
 .ipynb-renderer-root div.input_area {
-  background-color: white;
-  background: white;
+  background-color: #ededed;
+  background: #ededed;
   padding-right: 1.2em;
   border: 0px;
   border-radius: 0px;
@@ -2542,31 +2538,30 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.cell {
   padding: 0px;
-  background: white;
-  background-color: white;
-  border: 2px solid lightgray;
+  background: #ededed;
+  background-color: #ededed;
+  border: medium solid #ffffff;
   border-radius: 4px;
   top: 0;
-  margin-bottom: 20px;
 }
 .ipynb-renderer-root div.cell.selected {
-  background: white;
-  background-color: white;
-  border: 2px solid lightgray;
+  background: #ededed;
+  background-color: #ededed;
+  border: medium solid #ffffff;
   padding: 0px;
   border-radius: 5px;
 }
 .ipynb-renderer-root .edit_mode div.cell.selected {
   padding: 0px;
-  background: white;
-  background-color: white;
-  border: 2px solid lightgray;
+  background: #ededed;
+  background-color: #ededed;
+  border: medium solid #ffffff;
   border-radius: 5px;
 }
 .ipynb-renderer-root div.cell.edit_mode {
   padding: 0px;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
 }
 .ipynb-renderer-root div.CodeMirror-sizer {
   margin-left: 0px;
@@ -2581,7 +2576,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .edit_mode div.cell.selected:before,
 .ipynb-renderer-root div.cell.selected:before,
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected:before {
-  background: white !important;
+  background: #ededed !important;
   border: none;
   border-radius: 3px;
   position: absolute;
@@ -2595,45 +2590,45 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .edit_mode div.cell.text_cell.selected:before,
 .ipynb-renderer-root div.cell.text_cell.selected:before,
 .ipynb-renderer-root div.cell.text_cell.selected.jupyter-soft-selected:before {
-  background: white !important;
-  background-color: white !important;
-  border-color: #b58900 !important;
+  background: #ededed !important;
+  background-color: #ededed !important;
+  border-color: #f2f2f2 !important;
 }
 .ipynb-renderer-root div.cell.code_cell .input {
-  border-left: 5px solid white !important;
+  border-left: 5px solid #ededed !important;
   border-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 .ipynb-renderer-root div.cell.code_cell.selected .input {
-  border-left: 5px solid #93a1a1 !important;
+  border-left: 5px solid #ff7823 !important;
   border-radius: 3px;
 }
 .ipynb-renderer-root .edit_mode div.cell.code_cell.selected .input {
-  border-left: 5px solid #bbc4c5 !important;
+  border-left: 5px solid #ffd5bb !important;
   border-radius: 3px;
 }
 .ipynb-renderer-root .edit_mode div.cell.selected:before {
   height: 100%;
-  border-left: 5px solid #bbc4c5 !important;
+  border-left: 5px solid #ffd5bb !important;
   border-radius: 3px;
 }
 .ipynb-renderer-root div.cell.jupyter-soft-selected,
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected {
-  border-left-color: #bbc4c5 !important;
+  border-left-color: #ffd5bb !important;
   border-left-width: 0px !important;
   padding-left: 7px !important;
-  border-right-color: #bbc4c5 !important;
+  border-right-color: #ffd5bb !important;
   border-right-width: 0px !important;
-  background: #bbc4c5 !important;
+  background: #ffd5bb !important;
   border-radius: 6px !important;
 }
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected .input {
-  border-left: 5px solid white !important;
+  border-left: 5px solid #ededed !important;
 }
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected {
-  border-left-color: #93a1a1;
-  border-color: lightgray;
+  border-left-color: #ff7823;
+  border-color: #ffffff;
   padding-left: 7px;
   border-radius: 6px;
 }
@@ -2644,7 +2639,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected .prompt,
 .ipynb-renderer-root div.cell.text_cell.selected.jupyter-soft-selected .prompt {
   top: 0;
-  border-left: white !important;
+  border-left: #ededed !important;
   border-radius: 2px;
 }
 .ipynb-renderer-root
@@ -2654,24 +2649,24 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.cell.text_cell.jupyter-soft-selected,
 .ipynb-renderer-root div.cell.text_cell.selected.jupyter-soft-selected {
-  border-left-color: rgba(181, 137, 0, 0.4) !important;
+  border-left-color: #f2f2f2 !important;
   border-left-width: 0px !important;
   padding-left: 26px !important;
-  border-right-color: rgba(181, 137, 0, 0.4) !important;
+  border-right-color: #f2f2f2 !important;
   border-right-width: 0px !important;
-  background: rgba(181, 137, 0, 0.4) !important;
+  background: #f2f2f2 !important;
   border-radius: 5px !important;
 }
 .ipynb-renderer-root div.cell.jupyter-soft-selected .input,
 .ipynb-renderer-root div.cell.selected.jupyter-soft-selected .input {
-  border-left-color: #bbc4c5 !important;
+  border-left-color: #ffd5bb !important;
 }
 .ipynb-renderer-root div.prompt,
 .ipynb-renderer-root .prompt {
   font-family: monospace, monospace;
   font-size: 9pt !important;
   font-weight: normal;
-  color: #93a1a1;
+  color: #828892;
   line-height: 170%;
   padding: 0px;
   padding-top: 4px;
@@ -2683,7 +2678,7 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.prompt.input_prompt {
   font-size: 9pt !important;
-  background-color: white;
+  background-color: #ededed;
   border-top: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -2700,8 +2695,7 @@ http://ethanschoonover.com/solarized
   text-align: right;
 }
 .ipynb-renderer-root div.cell.code_cell .input_prompt {
-  border-right: 2px solid #bbc4c5;
-  display: none;
+  border-right: 2px solid rgba(240, 147, 43, 0.5);
 }
 .ipynb-renderer-root div.cell.selected .prompt {
   top: 0;
@@ -2728,16 +2722,16 @@ http://ethanschoonover.com/solarized
   visibility: visible;
 }
 .ipynb-renderer-root div.cell.code_cell.rendered.selected .run_this_cell:hover {
-  background-color: #fcf0d0;
-  background: #fcf0d0;
-  color: #93a1a1 !important;
+  background-color: #e3e3e3;
+  background: #e3e3e3;
+  color: #ff7823 !important;
 }
 .ipynb-renderer-root
   div.cell.code_cell.rendered.unselected
   .run_this_cell:hover {
-  background-color: #fcf0d0;
-  background: #fcf0d0;
-  color: #93a1a1 !important;
+  background-color: #e3e3e3;
+  background: #e3e3e3;
+  color: #ff7823 !important;
 }
 .ipynb-renderer-root i.fa-step-forward.fa {
   display: inline-block;
@@ -2759,12 +2753,12 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root
   div.cell.code_cell.rendered.unselected.jupyter-soft-selected
   .run_this_cell:hover {
-  background-color: #bbc4c5 !important;
-  background: #bbc4c5 !important;
-  color: #bbc4c5 !important;
+  background-color: #ffd5bb !important;
+  background: #ffd5bb !important;
+  color: #ffd5bb !important;
 }
 .ipynb-renderer-root div.output_wrapper {
-  background-color: lightgray;
+  background-color: #ffffff;
   border: 0px;
   left: 0px;
   margin-bottom: 0em;
@@ -2777,8 +2771,8 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 8.5pt !important;
   line-height: 150% !important;
-  background-color: lightgray;
-  color: #586e75;
+  background-color: #ffffff;
+  color: #303030;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   margin-left: 11.5px;
@@ -2787,7 +2781,7 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 8.5pt !important;
   line-height: 151% !important;
-  color: #586e75;
+  color: #303030;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
@@ -2798,8 +2792,8 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 8.5pt;
   color: #353535;
-  background-color: lightgray;
-  background: lightgray;
+  background-color: #ffffff;
+  background: #ffffff;
 }
 .ipynb-renderer-root div.output_subarea {
   overflow-x: auto;
@@ -2810,19 +2804,19 @@ http://ethanschoonover.com/solarized
   flex: 1;
 }
 .ipynb-renderer-root div.btn.btn-default.output_collapsed {
-  background: #e1d6b5;
-  background-color: #e1d6b5;
-  border-color: #e1d6b5;
+  background: #d7d7d7;
+  background-color: #d7d7d7;
+  border-color: #d7d7d7;
 }
 .ipynb-renderer-root div.btn.btn-default.output_collapsed:hover {
-  background: #ded2ae;
-  background-color: #ded2ae;
-  border-color: #ded2ae;
+  background: #d2d2d2;
+  background-color: #d2d2d2;
+  border-color: #d2d2d2;
 }
 .ipynb-renderer-root div.prompt.output_prompt {
   font-family: monospace, monospace;
   font-weight: bold !important;
-  background-color: lightgray;
+  background-color: #ffffff;
   color: transparent;
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0px;
@@ -2835,7 +2829,7 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.out_prompt_overlay.prompt {
   font-family: monospace, monospace;
   font-weight: bold !important;
-  background-color: lightgray;
+  background-color: #ffffff;
   border-bottom-left-radius: 2px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
@@ -2846,7 +2840,7 @@ http://ethanschoonover.com/solarized
   color: transparent;
 }
 .ipynb-renderer-root div.out_prompt_overlay.prompt:hover {
-  background-color: #e8e0c7;
+  background-color: #f7f7f7;
   box-shadow: none !important;
   border: none;
   border-bottom-left-radius: 2px;
@@ -2856,7 +2850,7 @@ http://ethanschoonover.com/solarized
   border-top-left-radius: 0px;
   min-width: 12ex !important;
   width: 12ex !important;
-  border-right: 2px solid #e8e0c7 !important;
+  border-right: 2px solid #f7f7f7 !important;
 }
 .ipynb-renderer-root div.cell.code_cell .output_prompt {
   border-right: 2px solid transparent;
@@ -2864,14 +2858,14 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.cell.selected .output_prompt,
 .ipynb-renderer-root div.cell.selected .out_prompt_overlay.prompt {
-  border-left: 5px solid rgba(181, 137, 0, 0.4);
-  border-right: 2px solid lightgray;
+  border-left: 5px solid #f2f2f2;
+  border-right: 2px solid #ffffff;
   border-radius: 0px !important;
 }
 .ipynb-renderer-root .edit_mode div.cell.selected .output_prompt,
 .ipynb-renderer-root .edit_mode div.cell.selected .out_prompt_overlay.prompt {
-  border-left: 5px solid rgba(181, 137, 0, 0.4);
-  border-right: 2px solid lightgray;
+  border-left: 5px solid #f2f2f2;
+  border-right: 2px solid #ffffff;
   border-radius: 0px !important;
 }
 .ipynb-renderer-root div.text_cell,
@@ -2880,9 +2874,9 @@ http://ethanschoonover.com/solarized
   font-family: sans-serif;
   font-size: 13pt;
   line-height: 130% !important;
-  color: #586e75;
-  background: white;
-  background-color: white;
+  color: #353535;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root div .text_cell_render {
@@ -2898,8 +2892,8 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root div.cell.text_cell.unrendered div.input_area,
 .ipynb-renderer-root div.cell.text_cell.rendered div.input_area {
-  background-color: white;
-  background: white;
+  background-color: #ededed;
+  background: #ededed;
   border: 0px;
   border-radius: 2px;
 }
@@ -2910,29 +2904,29 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.cell.text_cell.rendered.selected {
   font-family: sans-serif;
   line-height: 170% !important;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root div.cell.text_cell.unrendered.selected {
   font-family: sans-serif;
   line-height: 170% !important;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root div.cell.text_cell.selected {
   font-family: sans-serif;
   line-height: 170% !important;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root .edit_mode div.cell.text_cell.selected {
   font-family: sans-serif;
   line-height: 170% !important;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root div.text_cell.unrendered,
@@ -2940,8 +2934,8 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root div.edit_mode div.text_cell.unrendered {
   font-family: sans-serif;
   line-height: 170% !important;
-  background: white;
-  background-color: white;
+  background: #ededed;
+  background-color: #ededed;
   border-radius: 0px;
 }
 .ipynb-renderer-root div.cell.text_cell .prompt {
@@ -2953,47 +2947,47 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 9.5pt !important;
   font-weight: normal;
-  color: #93a1a1 !important;
+  color: #828892 !important;
   text-align: right !important;
   min-width: 12ex !important;
   width: 12ex !important;
-  background-color: white;
-  border-right: 2px solid rgba(181, 137, 0, 0.4);
-  border-left: 4px solid white;
+  background-color: #ededed;
+  border-right: 2px solid transparent;
+  border-left: 4px solid #ededed;
 }
 .ipynb-renderer-root div.cell.text_cell.unrendered .prompt {
   font-family: monospace, monospace;
   font-size: 9.5pt !important;
   font-weight: normal;
-  color: #93a1a1 !important;
+  color: #828892 !important;
   text-align: right !important;
   min-width: 12ex !important;
   width: 12ex !important;
-  border-right: 2px solid rgba(181, 137, 0, 0.4);
-  border-left: 4px solid white;
-  background-color: white;
+  border-right: 2px solid transparent;
+  border-left: 4px solid #ededed;
+  background-color: #ededed;
 }
 .ipynb-renderer-root div.cell.text_cell.rendered .prompt {
-  border-right: 2px solid rgba(181, 137, 0, 0.4);
+  border-right: 2px solid transparent;
 }
 .ipynb-renderer-root div.cell.text_cell.rendered.selected .prompt {
   top: 0;
-  border-left: 4px solid #b58900;
-  border-right: 2px solid rgba(181, 137, 0, 0.4);
+  border-left: 4px solid #f2f2f2;
+  border-right: 2px solid transparent;
 }
 .ipynb-renderer-root div.text_cell.unrendered.selected .prompt,
 .ipynb-renderer-root div.text_cell.rendered.selected .prompt {
   top: 0;
-  background: white;
-  border-left: 4px solid rgba(181, 137, 0, 0.4);
-  border-right: 2px solid rgba(181, 137, 0, 0.4);
+  background: #ededed;
+  border-left: 4px solid #f2f2f2;
+  border-right: 2px solid transparent;
 }
 .ipynb-renderer-root div.rendered_html code {
   font-family: monospace, monospace;
   font-size: 11;
   padding-top: 3px;
   padding-left: 2px;
-  color: #586e75;
+  color: #303030;
   background: #efefef;
   background-color: #efefef;
 }
@@ -3008,7 +3002,7 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 11 !important;
   line-height: 170% !important;
-  color: #586e75;
+  color: #353535;
   background: #efefef;
   background-color: #efefef;
   border-color: #efefef;
@@ -3017,7 +3011,7 @@ http://ethanschoonover.com/solarized
   padding: 1px;
   font-size: 11;
   font-weight: 800;
-  color: #586e75;
+  color: #303030;
   background-color: transparent !important;
   border: 0;
   box-shadow: none;
@@ -3028,13 +3022,13 @@ http://ethanschoonover.com/solarized
   margin: 0 0 9px;
   font-size: 12pt;
   line-height: 1.42857143;
-  color: #586e75;
+  color: #303030;
   background-color: #efefef;
   border: 1px solid #e7e7e7;
   border-radius: 2px;
 }
 .ipynb-renderer-root div.rendered_html {
-  color: #586e75;
+  color: #353535;
 }
 .ipynb-renderer-root .rendered_html * + ul {
   margin-top: 0.4em;
@@ -3048,7 +3042,7 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 11 !important;
   line-height: 170% !important;
-  color: #586e75 !important;
+  color: #353535 !important;
   background: #efefef;
   background-color: #efefef;
   border-left: 3px solid #efefef;
@@ -3062,15 +3056,15 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 11 !important;
   line-height: 170% !important;
-  color: #586e75;
-  background: lightgray;
-  background-color: lightgray;
+  color: #353535;
+  background: #ffffff;
+  background-color: #ffffff;
   max-width: 80%;
   border-radius: 0px;
   border-left: none;
 }
 .ipynb-renderer-root div.text_cell_render pre {
-  border-left: 3px solid #bbc4c5 !important;
+  border-left: 3px solid rgba(240, 147, 43, 0.5) !important;
   max-width: 80%;
   border-radius: 0px;
   padding-left: 5px;
@@ -3100,7 +3094,7 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .rendered_html h1,
 .ipynb-renderer-root .text_cell_render h1 {
-  color: #cb4b16 !important;
+  color: #126dce !important;
   font-size: 200%;
   text-align: left;
   font-style: normal;
@@ -3108,28 +3102,28 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root .rendered_html h2,
 .ipynb-renderer-root .text_cell_render h2 {
-  color: #cb4b16 !important;
+  color: #126dce !important;
   font-size: 170%;
   font-style: normal;
   font-weight: normal;
 }
 .ipynb-renderer-root .rendered_html h3,
 .ipynb-renderer-root .text_cell_render h3 {
-  color: #cb4b16 !important;
+  color: #126dce !important;
   font-size: 140%;
   font-style: normal;
   font-weight: normal;
 }
 .ipynb-renderer-root .rendered_html h4,
 .ipynb-renderer-root .text_cell_render h4 {
-  color: #cb4b16 !important;
+  color: #126dce !important;
   font-size: 110%;
   font-style: normal;
   font-weight: normal;
 }
 .ipynb-renderer-root .rendered_html h5,
 .ipynb-renderer-root .text_cell_render h5 {
-  color: #cb4b16 !important;
+  color: #126dce !important;
   font-size: 100%;
   font-style: normal;
   font-weight: normal;
@@ -3138,16 +3132,16 @@ http://ethanschoonover.com/solarized
   margin-top: 8px;
   margin-bottom: 10px;
   border: 0;
-  border-top: 1px solid #cb4b16;
+  border-top: 1px solid #126dce;
 }
 .ipynb-renderer-root .rendered_html hr {
-  color: #cb4b16;
-  background-color: #cb4b16;
+  color: #126dce;
+  background-color: #126dce;
   margin-right: 2em;
 }
 .ipynb-renderer-root #complete > select > option:hover {
-  background: #efeada;
-  background-color: #efeada;
+  background: #d4d4d4;
+  background-color: #d4d4d4;
 }
 .ipynb-renderer-root
   div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
@@ -3164,7 +3158,7 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 11;
   line-height: 170%;
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root div.CodeMirror-lines {
   padding-bottom: 0.9em;
@@ -3174,61 +3168,61 @@ http://ethanschoonover.com/solarized
 }
 .ipynb-renderer-root span.ansiblack,
 .ipynb-renderer-root .ansi-black-fg {
-  color: #002b36;
+  color: #e22978;
 }
 .ipynb-renderer-root span.ansiblue,
 .ipynb-renderer-root .ansi-blue-fg,
 .ipynb-renderer-root .ansi-blue-intense-fg {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root span.ansigray,
 .ipynb-renderer-root .ansi-gray-fg,
 .ipynb-renderer-root .ansi-gray-intense-fg {
-  color: #839496;
+  color: #ff8132;
 }
 .ipynb-renderer-root span.ansigreen,
 .ipynb-renderer-root .ansi-green-fg {
-  color: #859900;
+  color: #333333;
 }
 .ipynb-renderer-root .ansi-green-intense-fg {
-  color: #839496;
+  color: #ff8132;
 }
 .ipynb-renderer-root span.ansipurple,
 .ipynb-renderer-root .ansi-purple-fg,
 .ipynb-renderer-root .ansi-purple-intense-fg {
-  color: #6c71c4;
+  color: #653bc5;
 }
 .ipynb-renderer-root span.ansicyan,
 .ipynb-renderer-root .ansi-cyan-fg,
 .ipynb-renderer-root .ansi-cyan-intense-fg {
-  color: #6c71c4;
+  color: #653bc5;
 }
 .ipynb-renderer-root span.ansiyellow,
 .ipynb-renderer-root .ansi-yellow-fg,
 .ipynb-renderer-root .ansi-yellow-intense-fg {
-  color: #b58900;
+  color: #ff8132;
 }
 .ipynb-renderer-root span.ansired,
 .ipynb-renderer-root .ansi-red-fg,
 .ipynb-renderer-root .ansi-red-intense-fg {
-  color: #dc322f;
+  color: #de143d;
 }
 .ipynb-renderer-root div.output-stderr {
-  background-color: #cb4b16;
+  background-color: #ebb5b7;
 }
 .ipynb-renderer-root div.output-stderr pre {
-  color: #586e75;
+  color: #000000;
 }
 .ipynb-renderer-root div.js-error {
-  color: #dc322f;
+  color: #de143d;
 }
 .ipynb-renderer-root .ipython_tooltip {
   font-family: monospace, monospace;
   font-size: 11;
   line-height: 170%;
-  border: 2px solid #e2d8b8;
-  background: lightgray;
-  background-color: lightgray;
+  border: 2px solid #dadada;
+  background: #eeeeee;
+  background-color: #eeeeee;
   border-radius: 2px;
   overflow-x: visible;
   overflow-y: visible;
@@ -3240,9 +3234,9 @@ http://ethanschoonover.com/solarized
   font-family: monospace, monospace;
   font-size: 11;
   line-height: 170%;
-  background: lightgray;
-  background-color: lightgray;
-  color: #586e75;
+  background: #eeeeee;
+  background-color: #eeeeee;
+  color: #303030;
   overflow-x: visible;
   overflow-y: visible;
   max-width: 900px;
@@ -3261,32 +3255,32 @@ http://ethanschoonover.com/solarized
 .ipynb-renderer-root .cm-s-ipython.CodeMirror {
   font-family: monospace, monospace;
   font-size: 11;
-  background: white;
-  color: #586e75;
+  background: #ededed;
+  color: #303030;
   border-radius: 2px;
   font-style: normal;
   font-weight: normal;
   padding-right: 1.2em;
 }
 .ipynb-renderer-root .cm-s-ipython div.CodeMirror-selected {
-  background: #dfe3e3;
+  background: #e0e1e3;
 }
 .ipynb-renderer-root .CodeMirror-gutters {
   border: none;
-  border-right: 1px solid #dfe3e3 !important;
-  background-color: #dfe3e3 !important;
-  background: #dfe3e3 !important;
+  border-right: 1px solid #e0e1e3 !important;
+  background-color: #e0e1e3 !important;
+  background: #e0e1e3 !important;
   border-radius: 0px;
   white-space: nowrap;
 }
 .ipynb-renderer-root .cm-s-ipython .CodeMirror-gutters {
-  background: #dfe3e3;
+  background: #e0e1e3;
   border: none;
   border-radius: 0px;
   width: 36px;
 }
 .ipynb-renderer-root .cm-s-ipython .CodeMirror-linenumber {
-  color: #657b83;
+  color: #828892;
 }
 .ipynb-renderer-root .CodeMirror-sizer {
   margin-left: 40px;
@@ -3304,83 +3298,83 @@ http://ethanschoonover.com/solarized
   text-align: right;
 }
 .ipynb-renderer-root .CodeMirror-linenumber {
-  color: #657b83;
+  color: #828892;
 }
 .ipynb-renderer-root .cm-s-ipython .CodeMirror-cursor {
   border-left: 2px solid default !important;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-comment {
-  color: #93a1a1;
+  color: #8d8d8d;
   font-style: italic;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-atom {
-  color: #d33682;
+  color: #055be0;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-number {
-  color: #268bd2;
+  color: #ff8132;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-property {
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-attribute {
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-keyword {
-  color: #859900;
+  color: #713bc5;
   font-weight: normal;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-string {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-meta {
-  color: #6c71c4;
+  color: #aa22ff;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-operator {
-  color: #268bd2;
+  color: #055be0;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-builtin {
-  color: #d33682;
+  color: #e22978;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-variable {
-  color: #586e75;
+  color: #303030;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-variable-2 {
-  color: #586e75;
+  color: #de143d;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-variable-3 {
-  color: #586e75;
+  color: #aa22ff;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-def {
-  color: #268bd2;
+  color: #e22978;
   font-weight: normal;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-error {
-  background: white;
+  background: rgba(191, 11, 55, 0.7);
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-tag {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-link {
-  color: #859900;
+  color: #ef5c00;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-storage {
-  color: #d33682;
+  color: #055be0;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-entity {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .cm-s-ipython span.cm-quote {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root div.CodeMirror span.CodeMirror-matchingbracket {
   color: #ffffff;
   font-weight: bold;
-  background-color: white;
+  background-color: #009e07;
 }
 .ipynb-renderer-root div.CodeMirror span.CodeMirror-nonmatchingbracket {
   color: #ffffff;
   font-weight: bold;
-  background: #dc322f !important;
+  background: rgba(191, 11, 55, 0.7) !important;
 }
 .ipynb-renderer-root .cm-header-1 {
   font-size: 215%;
@@ -3398,50 +3392,50 @@ http://ethanschoonover.com/solarized
   font-size: 100%;
 }
 .ipynb-renderer-root .cm-s-default .cm-hr {
-  color: #268bd2;
+  color: #055be0;
 }
 .ipynb-renderer-root div.cell.text_cell .cm-s-default .cm-header {
   font-family: sans-serif;
   font-weight: normal;
-  color: #cb4b16 !important;
+  color: #126dce !important;
   margin-top: 0.3em !important;
   margin-bottom: 0.3em !important;
 }
 .ipynb-renderer-root div.cell.text_cell .cm-s-default span.cm-variable-2 {
-  color: #586e75 !important;
+  color: #353535 !important;
 }
 .ipynb-renderer-root div.cell.text_cell .cm-s-default span.cm-variable-3 {
-  color: #586e75 !important;
+  color: #aa22ff !important;
 }
 .ipynb-renderer-root .cm-s-default span.cm-comment {
-  color: #93a1a1 !important;
+  color: #8d8d8d !important;
 }
 .ipynb-renderer-root .cm-s-default .cm-tag {
-  color: #586e75;
+  color: #009fb7;
 }
 .ipynb-renderer-root .cm-s-default .cm-builtin {
-  color: #d33682;
+  color: #e22978;
 }
 .ipynb-renderer-root .cm-s-default .cm-string {
-  color: #268bd2;
+  color: #009e07;
 }
 .ipynb-renderer-root .cm-s-default .cm-keyword {
-  color: #859900;
+  color: #713bc5;
 }
 .ipynb-renderer-root .cm-s-default .cm-number {
-  color: #268bd2;
+  color: #ff8132;
 }
 .ipynb-renderer-root .cm-s-default .cm-error {
-  color: #d33682;
+  color: #055be0;
 }
 .ipynb-renderer-root .cm-s-default .cm-link {
-  color: #859900;
+  color: #ef5c00;
 }
 .ipynb-renderer-root .cm-s-default .cm-atom {
-  color: #268bd2;
+  color: #ff8132;
 }
 .ipynb-renderer-root .cm-s-default .cm-def {
-  color: #268bd2;
+  color: #e22978;
 }
 .ipynb-renderer-root .CodeMirror-cursor {
   border-left: 2px solid default !important;
@@ -3449,10 +3443,10 @@ http://ethanschoonover.com/solarized
   width: 0;
 }
 .ipynb-renderer-root .cm-s-default div.CodeMirror-selected {
-  background: #dfe3e3;
+  background: #e0e1e3;
 }
 .ipynb-renderer-root .cm-s-default .cm-selected {
-  background: #dfe3e3;
+  background: #e0e1e3;
 }
 .ipynb-renderer-root .MathJax_Display,
 .ipynb-renderer-root .MathJax {
