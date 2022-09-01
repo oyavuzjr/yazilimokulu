@@ -28,6 +28,8 @@ import {
 } from '@heroicons/react/20/solid';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Header from '../../../components/Header';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { Course, PrismaClient } from '@prisma/client';
 
 const user = {
   name: 'Whitney Francis',
@@ -123,7 +125,9 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function CoursePage() {
+type Props = { course: Course };
+
+export default function CoursePage({ course }) {
   return (
     <>
       <div className="min-h-full">
@@ -208,7 +212,7 @@ export default function CoursePage() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Ricardo Cooper
+                  {course.name}
                 </h1>
                 <p className="text-sm font-medium text-gray-500">
                   Applied for{' '}
@@ -530,3 +534,36 @@ export default function CoursePage() {
     </>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prisma = new PrismaClient();
+  const courses = await prisma.course.findMany({
+    include: { resources: true },
+  });
+  const parameters = courses.map((course) => ({
+    params: {
+      course: course.slug,
+    },
+  }));
+  return {
+    // eslint-disable-next-line prefer-spread
+    paths: parameters,
+    fallback: false, // can also be true or 'blocking'
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const courseSlug = params && (params.courseSlug as string);
+  const prisma = new PrismaClient();
+  const course = await prisma.course.findFirst({
+    where: { slug: courseSlug },
+    include: { resources: true },
+  });
+
+  return {
+    props: {
+      course,
+    },
+  };
+};
