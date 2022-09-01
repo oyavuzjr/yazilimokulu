@@ -66,10 +66,10 @@ export default function TitlePage({
         ```
       */}
       <div className="min-h-full bg-neutral-300">
-        <div className="bg-sky-600 pb-32">
+        <div className="bg-indigo-600 pb-32">
           <Disclosure
             as="nav"
-            className="border-b border-indigo-300 border-opacity-25 bg-sky-600 lg:border-none"
+            className="border-b border-indigo-300 border-opacity-25 bg-indigo-600 lg:border-none"
           >
             <Header open={true} />
           </Disclosure>

@@ -104,7 +104,7 @@ export default function SideBar({
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-sky-700 pt-5 pb-4">
+                <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-indigo-700 pt-5 pb-4">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-300"
@@ -146,8 +146,8 @@ export default function SideBar({
                             key={item.title}
                             className={classNames(
                               idx == selectedIndex //item.current
-                                ? 'bg-sky-800 text-white'
-                                : 'text-indigo-100 hover:bg-sky-600',
+                                ? 'bg-indigo-500 text-white'
+                                : 'text-indigo-100 hover:bg-indigo-600',
                               'group flex items-center px-2 py-2 text-base font-medium rounded-md'
                             )}
                           >
@@ -176,7 +176,7 @@ export default function SideBar({
         {/* Static sidebar for desktop */}
         <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex flex-grow flex-col overflow-y-auto bg-sky-800 pt-5">
+          <div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700 pt-5 ">
             <div className="flex flex-shrink-0 items-center px-4">
               <div className=" w-auto">{topOfBar}</div>
             </div>
@@ -191,8 +191,8 @@ export default function SideBar({
                       key={item.title}
                       className={classNames(
                         idx == selectedIndex //item.current
-                          ? 'bg-sky-800 bg-blue-300 font-extrabold'
-                          : 'text-indigo-100 hover:bg-sky-600',
+                          ? 'bg-indigo-500 bg-blue-300 font-extrabold'
+                          : 'text-indigo-100 hover:bg-indigo-600',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                       )}
                     >
