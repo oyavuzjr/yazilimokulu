@@ -119,7 +119,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     }))
   );
-  console.log('@@@@@@', JSON.stringify(parameters));
   return {
     // eslint-disable-next-line prefer-spread
     paths: parameters.flat(),
