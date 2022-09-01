@@ -9,6 +9,8 @@ import {
   PaperClipIcon,
   QuestionMarkCircleIcon,
   UserIcon,
+  CodeBracketIcon,
+  CommandLineIcon,
 } from '@heroicons/react/20/solid';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { PropsOf } from '@headlessui/react/dist/types';
@@ -47,11 +49,17 @@ export default function Example({ open }: Props) {
         <div className="relative flex h-16 items-center justify-between lg:border-b lg:border-indigo-400 lg:border-opacity-25">
           <div className="flex items-center px-2 lg:px-0">
             <div className="flex-shrink-0">
-              <img
+              {/* <img
                 className="block h-8 w-8"
                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=300"
                 alt="Workflow"
-              />
+              /> */}
+              <div className="flex flex-row items-center">
+                <CommandLineIcon className="text-white block h-10 w-10" />
+                <div className="align-middle	ml-2 text-xl font-bold text-white">
+                  Yazılım Okulu
+                </div>
+              </div>
             </div>
             <div className="hidden lg:ml-10 lg:block">
               <div className="flex space-x-4">

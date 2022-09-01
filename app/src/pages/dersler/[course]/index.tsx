@@ -23,13 +23,16 @@ import {
   HomeIcon,
   MagnifyingGlassIcon,
   PaperClipIcon,
+  ComputerDesktopIcon,
+  PlayIcon,
   QuestionMarkCircleIcon,
   UserIcon,
 } from '@heroicons/react/20/solid';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Header from '../../../components/Header';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Course, PrismaClient } from '@prisma/client';
+import { Course, PrismaClient, Resource } from '@prisma/client';
+import Link from 'next/link';
 
 const user = {
   name: 'Whitney Francis',
@@ -125,9 +128,14 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-type Props = { course: Course };
+type Props = {
+  course:
+    | Course & {
+        resources: Resource[];
+      };
+};
 
-export default function CoursePage({ course }) {
+export default function CoursePage({ course }: Props) {
   return (
     <>
       <div className="min-h-full">
@@ -214,28 +222,23 @@ export default function CoursePage({ course }) {
                 <h1 className="text-2xl font-bold text-gray-900">
                   {course.name}
                 </h1>
-                <p className="text-sm font-medium text-gray-500">
+                {/* Secondary text  */}
+                {/* <p className="text-sm font-medium text-gray-500">
                   Applied for{' '}
                   <a href="#" className="text-gray-900">
                     Front End Developer
                   </a>{' '}
                   on <time dateTime="2020-08-25">August 25, 2020</time>
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="justify-stretch mt-6 flex flex-col-reverse space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-y-0 sm:space-x-3 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              >
-                Disqualify
-              </button>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              >
-                Advance to offer
-              </button>
+              <Link href={`/dersler/${course.slug}/1`}>
+                <button className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                  <PlayIcon className="w-6 h-6 mr-4" />
+                  Öğrenmeye başla!
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -244,18 +247,7 @@ export default function CoursePage({ course }) {
               {/* Description list*/}
               <section aria-labelledby="applicant-information-title">
                 <div className="bg-white shadow sm:rounded-lg">
-                  <div className="px-4 py-5 sm:px-6">
-                    <h2
-                      id="applicant-information-title"
-                      className="text-lg font-medium leading-6 text-gray-900"
-                    >
-                      Applicant Information
-                    </h2>
-                    <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                      Personal details and application.
-                    </p>
-                  </div>
-                  <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+                  <div className=" px-4 py-5 sm:px-6">
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
@@ -302,36 +294,31 @@ export default function CoursePage({ course }) {
                       </div>
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">
-                          Attachments
+                          Dersler
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
                           <ul
                             role="list"
                             className="divide-y divide-gray-200 rounded-md border border-gray-200"
                           >
-                            {attachments.map((attachment) => (
-                              <li
-                                key={attachment.name}
-                                className="flex items-center justify-between py-3 pl-3 pr-4 text-sm"
+                            {course.resources.map((resource, idx) => (
+                              <Link
+                                key={idx}
+                                href={`/dersler/${course.slug}/${resource.part}`}
                               >
-                                <div className="flex w-0 flex-1 items-center">
-                                  <PaperClipIcon
-                                    className="h-5 w-5 flex-shrink-0 text-gray-400"
-                                    aria-hidden="true"
-                                  />
-                                  <span className="ml-2 w-0 flex-1 truncate">
-                                    {attachment.name}
-                                  </span>
-                                </div>
-                                <div className="ml-4 flex-shrink-0">
-                                  <a
-                                    href={attachment.href}
-                                    className="font-medium text-blue-600 hover:text-blue-500"
-                                  >
-                                    Download
-                                  </a>
-                                </div>
-                              </li>
+                                <li className="hover:cursor-pointer hover:bg-neutral-200 flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                                  <div className="flex w-0 flex-1 items-center">
+                                    <ComputerDesktopIcon
+                                      className="h-5 w-5 flex-shrink-0 text-gray-400"
+                                      aria-hidden="true"
+                                    />
+                                    <span className="ml-2 w-0 flex-1 truncate">
+                                      {resource.part}
+                                      {'. '} {resource.title}
+                                    </span>
+                                  </div>
+                                </li>
+                              </Link>
                             ))}
                           </ul>
                         </dd>
