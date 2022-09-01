@@ -133,22 +133,27 @@ export default function SideBar({ children, navItems, selectedIndex }: Props) {
                     <nav className="space-y-1 px-2">
                       {navItems.map((item, idx) => (
                         <Link
-                          key={item.title}
-                          href={item.id.toString()}
-                          className={classNames(
-                            idx == selectedIndex //item.current
-                              ? 'bg-sky-800 text-white'
-                              : 'text-indigo-100 hover:bg-sky-600',
-                            'group flex items-center px-2 py-2 text-base font-medium rounded-md'
-                          )}
+                          key={idx}
+                          href={`/dersler/python-basic/${item.id.toString()}`}
                         >
-                          {/* {item.icon && (
+                          <a
+                            key={item.title}
+                            className={classNames(
+                              idx == selectedIndex //item.current
+                                ? 'bg-sky-800 text-white'
+                                : 'text-indigo-100 hover:bg-sky-600',
+                              'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+                            )}
+                          >
+                            {/* {item.icon && (
                             <item.icon
                               className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300"
                               aria-hidden="true"
                             />
                           )} */}
-                          {item.title}
+
+                            {item.title}
+                          </a>
                         </Link>
                       ))}
                     </nav>
@@ -176,24 +181,29 @@ export default function SideBar({ children, navItems, selectedIndex }: Props) {
             <div className="mt-5 flex flex-1 flex-col">
               <nav className="flex-1 space-y-1 px-2 pb-4">
                 {navItems.map((item, idx) => (
-                  <a
-                    key={item.title}
-                    href={item.id.toString()}
-                    className={classNames(
-                      idx == selectedIndex //item.current
-                        ? 'bg-sky-800 bg-blue-300 font-extrabold'
-                        : 'text-indigo-100 hover:bg-sky-600',
-                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
-                    )}
+                  <Link
+                    key={idx}
+                    href={`/dersler/python-basic/${item.id.toString()}`}
                   >
-                    {/* {item.icon && (
+                    <a
+                      key={item.title}
+                      className={classNames(
+                        idx == selectedIndex //item.current
+                          ? 'bg-sky-800 bg-blue-300 font-extrabold'
+                          : 'text-indigo-100 hover:bg-sky-600',
+                        'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                      )}
+                    >
+                      {/* {item.icon && (
                       <item.icon
                         className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300"
                         aria-hidden="true"
                       />
                     )} */}
-                    {item.title}
-                  </a>
+
+                      {item.title}
+                    </a>
+                  </Link>
                 ))}
               </nav>
             </div>
