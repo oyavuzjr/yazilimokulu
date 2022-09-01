@@ -20,7 +20,22 @@ export default function CoursePage({ course, part, notebook }: Props) {
         { title: '3. If', id: 3 },
       ]}
     >
-      <TitlePage title="Python ile Programlama">
+      <TitlePage
+        video={
+          <YouTube
+            opts={{
+              playerVars: {
+                autoplay: 1,
+              },
+              width: '100%',
+              height: '700px',
+              className: 'absolute',
+            }}
+            videoId={part?.videoId}
+          />
+        }
+        title="Python ile Programlama"
+      >
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           {/* Mobile top navigation */}
           <div className="lg:hidden">
@@ -46,17 +61,7 @@ export default function CoursePage({ course, part, notebook }: Props) {
           </div>
           {/* CONTENT HERE */}
 
-          <YouTube
-            opts={{
-              playerVars: {
-                autoplay: 1,
-              },
-              width: '100%',
-              height: '700px',
-              className: 'absolute',
-            }}
-            videoId={part?.videoId}
-          />
+          {'Content Here'}
           {/* {JSON.stringify(parts)}
           {JSON.stringify(course)}
           {JSON.stringify(part)} */}

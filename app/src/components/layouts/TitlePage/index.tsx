@@ -42,9 +42,9 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-type Props = { title: string; children: ReactNode };
+type Props = { title: string; children: ReactNode; video?: ReactNode };
 
-export default function TitlePage({ title, children }: Props) {
+export default function TitlePage({ title, children, video }: Props) {
   return (
     <>
       {/*
@@ -63,7 +63,7 @@ export default function TitlePage({ title, children }: Props) {
           >
             <Header open={true} />
           </Disclosure>
-          {children}
+          {video}
           <header className="py-10">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <h1 className="text-3xl font-bold tracking-tight text-white">
@@ -79,7 +79,7 @@ export default function TitlePage({ title, children }: Props) {
               {/* Replace with your content */}
               <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
                 <div className="w-full rounded-lg   border-gray-200">
-                  Notebook content here
+                  {children}
                 </div>
               </div>
               {/* /End replace */}
