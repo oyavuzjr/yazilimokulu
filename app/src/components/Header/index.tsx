@@ -58,8 +58,8 @@ export default function Example({ open }: Props) {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? 'bg-blue-700 text-white'
-                        : 'text-white hover:bg-blue-500 hover:bg-opacity-75',
+                        ? 'bg-sky-700 text-white'
+                        : 'text-white hover:bg-sky-500 hover:bg-opacity-75',
                       'rounded-md py-2 px-3 text-sm font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
@@ -91,7 +91,7 @@ export default function Example({ open }: Props) {
           </div>
           <div className="flex lg:hidden">
             {/* Mobile menu button */}
-            <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-blue-600 p-2 text-indigo-200 hover:bg-blue-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+            <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-sky-600 p-2 text-indigo-200 hover:bg-sky-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
               <span className="sr-only">Open main menu</span>
               {open ? (
                 <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -104,7 +104,7 @@ export default function Example({ open }: Props) {
             <div className="flex items-center">
               <button
                 type="button"
-                className="flex-shrink-0 rounded-full bg-blue-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+                className="flex-shrink-0 rounded-full bg-sky-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
               >
                 <span className="sr-only">View notifications</span>
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -113,7 +113,7 @@ export default function Example({ open }: Props) {
               {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3 flex-shrink-0">
                 <div>
-                  <Menu.Button className="flex rounded-full bg-blue-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                  <Menu.Button className="flex rounded-full bg-sky-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-8 w-8 rounded-full"
@@ -164,8 +164,8 @@ export default function Example({ open }: Props) {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'bg-blue-700 text-white'
-                  : 'text-white hover:bg-blue-500 hover:bg-opacity-75',
+                  ? 'bg-sky-700 text-white'
+                  : 'text-white hover:bg-sky-500 hover:bg-opacity-75',
                 'block rounded-md py-2 px-3 text-base font-medium'
               )}
               aria-current={item.current ? 'page' : undefined}
@@ -193,7 +193,7 @@ export default function Example({ open }: Props) {
             </div>
             <button
               type="button"
-              className="ml-auto flex-shrink-0 rounded-full bg-blue-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+              className="ml-auto flex-shrink-0 rounded-full bg-sky-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
             >
               <span className="sr-only">View notifications</span>
               <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -205,7 +205,7 @@ export default function Example({ open }: Props) {
                 key={item.name}
                 as="a"
                 href={item.href}
-                className="block rounded-md py-2 px-3 text-base font-medium text-white hover:bg-blue-500 hover:bg-opacity-75"
+                className="block rounded-md py-2 px-3 text-base font-medium text-white hover:bg-sky-500 hover:bg-opacity-75"
               >
                 {item.name}
               </Disclosure.Button>

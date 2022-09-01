@@ -65,11 +65,11 @@ export default function TitlePage({
         <body class="h-full">
         ```
       */}
-      <div className="min-h-full">
-        <div className="bg-blue-600 pb-32">
+      <div className="min-h-full bg-neutral-300">
+        <div className="bg-sky-600 pb-32">
           <Disclosure
             as="nav"
-            className="border-b border-indigo-300 border-opacity-25 bg-blue-600 lg:border-none"
+            className="border-b border-indigo-300 border-opacity-25 bg-sky-600 lg:border-none"
           >
             <Header open={true} />
           </Disclosure>
@@ -90,7 +90,7 @@ export default function TitlePage({
           {
             <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
               {/* Replace with your content */}
-              <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
+              <div className="rounded-lg bg-stone-200 px-5 py-6 shadow sm:px-6">
                 <div className="w-full rounded-lg   border-gray-200">
                   {children}
                 </div>
