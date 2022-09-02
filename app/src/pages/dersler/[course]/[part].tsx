@@ -13,6 +13,7 @@ import { title } from 'process';
 // import 'react-ipynb-renderer/dist/styles/grade3.css';
 import { ArrowLongLeftIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 type Props = {
   course: Course;
   part: Resource;
@@ -43,6 +44,15 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
       selectedIndex={part.part - 1}
     >
       <TitlePage
+        breadcrumbs={
+          <Breadcrumbs
+            breadcrumbs={[
+              { name: 'Dersler', href: '/dersler' },
+              { name: course.name, href: `/dersler/${course.slug}` },
+              { name: part.title, href: `/dersler/${part.part}` },
+            ]}
+          />
+        }
         video={
           <YouTube
             opts={{

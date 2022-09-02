@@ -47,6 +47,7 @@ type Props = {
   secondaryTitle?: string;
   children: ReactNode;
   video?: ReactNode;
+  breadcrumbs?: ReactNode;
 };
 
 export default function TitlePage({
@@ -54,6 +55,7 @@ export default function TitlePage({
   secondaryTitle,
   children,
   video,
+  breadcrumbs,
 }: Props) {
   return (
     <>
@@ -66,6 +68,7 @@ export default function TitlePage({
               {title}
             </h1>
           </div>
+          {breadcrumbs}
         </header>
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">

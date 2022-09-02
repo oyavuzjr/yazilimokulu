@@ -4,6 +4,7 @@ import path from 'path';
 import Header from '../../components/Header';
 import { GetStaticProps } from 'next';
 import { Course, PrismaClient } from '@prisma/client';
+import Breadcrumbs from '../../components/Breadcrumbs';
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -54,6 +55,8 @@ export default function Courses({ courses }: Props) {
   return (
     <>
       <Header open={false} />
+      <Breadcrumbs breadcrumbs={[{ name: 'Dersler', href: '/dersler' }]} />
+      <hr />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold py-8">Dersler</h1>
         <ul
