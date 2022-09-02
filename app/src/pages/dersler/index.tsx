@@ -56,7 +56,9 @@ export default function Courses({ courses }: Props) {
   return (
     <>
       <Header open={false} />
-      <Breadcrumbs breadcrumbs={[{ name: 'Dersler', href: '/dersler' }]} />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs breadcrumbs={[{ name: 'Dersler', href: '/dersler' }]} />
+      </div>
       <hr />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold py-8">Dersler</h1>

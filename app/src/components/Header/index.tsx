@@ -14,6 +14,7 @@ import {
 } from '@heroicons/react/20/solid';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { PropsOf } from '@headlessui/react/dist/types';
+import Link from 'next/link';
 
 const user = {
   name: 'Tom Cook',
@@ -22,11 +23,8 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Dersler', href: '/dersler' },
+  { name: 'İletişim', href: '/iletisim' },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -54,29 +52,30 @@ export default function Example({ open }: Props) {
                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=300"
                 alt="Workflow"
               /> */}
-              <div className="flex flex-row items-center">
-                <CommandLineIcon className="text-white block h-10 w-10" />
-                <div className="align-middle	ml-2 text-xl font-bold text-white">
-                  Yazılım Okulu
+              <Link href="/">
+                <div className="hover:cursor-pointer flex flex-row items-center">
+                  <CommandLineIcon className="text-white block h-10 w-10" />
+                  <div className="align-middle	ml-2 text-xl font-bold text-white">
+                    Yazılım Okulu
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="hidden lg:ml-10 lg:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? 'bg-blue-600 text-white'
-                        : 'text-white hover:bg-blue-500 hover:bg-opacity-75',
-                      'rounded-md py-2 px-3 text-sm font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </a>
+                  <Link key={item.name} href={item.href}>
+                    <a
+                      className={classNames(
+                        item.current
+                          ? 'bg-blue-600 text-white'
+                          : 'text-white hover:bg-blue-500 hover:bg-opacity-75',
+                        'rounded-md py-2 px-3 text-sm font-medium'
+                      )}
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
