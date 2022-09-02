@@ -2,6 +2,8 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import Header from '../../components/Header';
+import { GetStaticProps } from 'next';
+import { Course, PrismaClient } from '@prisma/client';
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -46,7 +48,9 @@ const files = [
   // More files...
 ];
 
-export default function Example() {
+type Props = { courses: Course[] };
+
+export default function Courses({ courses }: Props) {
   return (
     <>
       <Header open={false} />
@@ -56,11 +60,13 @@ export default function Example() {
           role="list"
           className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
-          {files.map((file) => (
-            <li key={file.source} className="relative">
+          {courses.map((course, idx) => (
+            <li key={idx} className="relative">
               <div className="w-40 h-40 group aspect-square block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                 <img
-                  src={file.source}
+                  src={
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png'
+                  }
                   alt=""
                   className="pointer-events-none object-cover group-hover:opacity-75"
                 />
@@ -68,14 +74,16 @@ export default function Example() {
                   type="button"
                   className="absolute inset-0 focus:outline-none"
                 >
-                  <span className="sr-only">View details for {file.title}</span>
+                  <span className="sr-only">
+                    View details for {course.name}
+                  </span>
                 </button>
               </div>
               <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
-                {file.title}
+                {course.name}
               </p>
               <p className="pointer-events-none block text-sm font-medium text-gray-500">
-                {file.size}
+                {course.slug}
               </p>
             </li>
           ))}
@@ -84,16 +92,16 @@ export default function Example() {
     </>
   );
 }
-
-export async function getStaticProps(context: any) {
-  const coursesPath = path.join(process.cwd(), '..', 'dersler');
-  const courses = fs
-    .readdirSync(coursesPath, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const prisma = new PrismaClient();
+  const courses = await prisma.course.findMany({
+    include: { resources: true },
+  });
 
   return {
-    // Passed to the page component as props
-    props: { courses: courses },
+    props: {
+      courses,
+    },
   };
-}
+};
