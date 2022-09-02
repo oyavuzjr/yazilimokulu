@@ -57,6 +57,24 @@ export default function TitlePage({
 }: Props) {
   return (
     <>
+      <Header open={true} />
+      {video}
+      <div className="min-h-full">
+        <header className="bg-white shadow">
+          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 bg-blue-600 ">
+            <h1 className="text-3xl font-bold leading-tight tracking-tight text-white">
+              {title}
+            </h1>
+          </div>
+        </header>
+        <main>
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            {/* Replace with your content */}
+            {children}
+            {/* /End replace */}
+          </div>
+        </main>
+      </div>
       {/*
         This example requires updating your template:
 
@@ -65,36 +83,6 @@ export default function TitlePage({
         <body class="h-full">
         ```
       */}
-      <div className="min-h-full bg-neutral-300">
-        <div className="bg-blue-600 pb-32">
-          <Header open={true} />
-          {video}
-          <header className="py-10">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <h1 className="text-3xl font-bold tracking-tight text-white">
-                {title}
-              </h1>
-              <h3 className="text-xl tracking-tight text-zinc-300">
-                {secondaryTitle}
-              </h3>
-            </div>
-          </header>
-        </div>
-
-        <main className="-mt-32">
-          {
-            <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-              {/* Replace with your content */}
-              <div className="rounded-lg bg-stone-200 px-5 py-6 shadow sm:px-6">
-                <div className="w-full rounded-lg   border-gray-200">
-                  {children}
-                </div>
-              </div>
-              {/* /End replace */}
-            </div>
-          }
-        </main>
-      </div>
     </>
   );
 }
