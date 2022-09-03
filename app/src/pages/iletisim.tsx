@@ -3,9 +3,9 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import Header from '../components/Header';
 import TitlePage from '../components/layouts/TitlePage';
 
-type Props = {};
+// type Props = {};
 
-export default function Iletisim({}: Props) {
+export default function Iletisim() {
   return (
     <>
       <Header open={false} />

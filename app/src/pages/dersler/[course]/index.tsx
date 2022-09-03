@@ -14,6 +14,7 @@
   }
   ```
 */
+import YouTube from 'react-youtube';
 import {
   CheckIcon,
   ClockIcon,
@@ -146,7 +147,7 @@ export default function CoursePage({ course }: Props) {
                 <div className="relative">
                   <img
                     className="h-16 w-16 rounded-full"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png"
+                    src={course.logoUrl}
                     alt=""
                   />
                   <span
@@ -178,7 +179,17 @@ export default function CoursePage({ course }: Props) {
               </Link>
             </div>
           </div>
-
+          <YouTube
+            opts={{
+              playerVars: {
+                autoplay: 1,
+              },
+              width: '100%',
+              height: '600px',
+              className: ' mx-auto text-center',
+            }}
+            videoId={course.videoId}
+          />
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
             <div className="space-y-6 lg:col-span-2 lg:col-start-1">
               {/* Description list*/}
@@ -191,14 +202,16 @@ export default function CoursePage({ course }: Props) {
                           Seviye
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          Başlangıç
+                          {course.level}
                         </dd>
                       </div>
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
-                          Programlama Dili
+                          Konu
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">Python</dd>
+                        <dd className="mt-1 text-sm text-gray-900">
+                          {course.topic}
+                        </dd>
                       </div>
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
@@ -218,15 +231,10 @@ export default function CoursePage({ course }: Props) {
                       </div> */}
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">
-                          About
+                          Hakkında
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
-                          anim incididunt cillum culpa consequat. Excepteur qui
-                          ipsum aliquip consequat sint. Sit id mollit nulla
-                          mollit nostrud in ea officia proident. Irure nostrud
-                          pariatur mollit ad adipisicing reprehenderit deserunt
-                          qui eu.
+                          {course.description}
                         </dd>
                       </div>
                       <div className="sm:col-span-2">
@@ -379,7 +387,6 @@ export default function CoursePage({ course }: Props) {
                 </div>
               </section>
             </div>
-
             <section
               aria-labelledby="timeline-title"
               className="lg:col-span-1 lg:col-start-3"

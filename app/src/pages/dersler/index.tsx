@@ -90,7 +90,7 @@ export default function Courses({ courses }: Props) {
                   {course.name}
                 </p>
                 <p className="pointer-events-none block text-sm font-medium text-gray-500">
-                  {course.slug}
+                  {course.level}
                 </p>
               </li>
             </Link>
