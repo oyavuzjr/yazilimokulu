@@ -14,8 +14,8 @@
   }
   ```
 */
-import { Fragment, ReactNode, useState } from 'react';
-import { Dialog, Menu, Transition } from '@headlessui/react';
+import { Fragment, ReactNode, useState } from "react";
+import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
   Bars3BottomLeftIcon,
   BellIcon,
@@ -26,9 +26,9 @@ import {
   InboxIcon,
   UsersIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline';
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import Link from 'next/link';
+} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 type navItem = { title: string; icon?: JSX.Element; id: number };
 
@@ -40,21 +40,21 @@ type Props = {
 };
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
+  { name: "Team", href: "#", icon: UsersIcon, current: false },
+  { name: "Projects", href: "#", icon: FolderIcon, current: false },
+  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
+  { name: "Documents", href: "#", icon: InboxIcon, current: false },
+  { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
 ];
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
+  { name: "Your Profile", href: "#" },
+  { name: "Settings", href: "#" },
+  { name: "Sign out", href: "#" },
 ];
 
 function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function SideBar({
@@ -146,9 +146,9 @@ export default function SideBar({
                             key={item.title}
                             className={classNames(
                               idx == selectedIndex //item.current
-                                ? 'bg-blue-500 text-white'
-                                : 'text-indigo-100 hover:bg-blue-600',
-                              'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+                                ? "bg-blue-500 text-white"
+                                : "text-indigo-100 hover:bg-blue-600",
+                              "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                             )}
                           >
                             {/* {item.icon && (
@@ -191,9 +191,9 @@ export default function SideBar({
                       key={item.title}
                       className={classNames(
                         idx == selectedIndex //item.current
-                          ? 'bg-blue-500 bg-blue-300 font-extrabold'
-                          : 'text-indigo-100 hover:bg-blue-600',
-                        'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                          ? "bg-blue-500 bg-blue-300 font-extrabold"
+                          : "text-indigo-100 hover:bg-blue-600",
+                        "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                       )}
                     >
                       {/* {item.icon && (

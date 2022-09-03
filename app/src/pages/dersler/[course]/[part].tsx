@@ -1,19 +1,19 @@
-import { Bars3Icon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
-import SideBar from '../../../components/layouts/SideBar';
-import TitlePage from '../../../components/layouts/TitlePage';
-import { trpc } from '../../../utils/trpc';
-import YouTube from 'react-youtube';
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
-import { Course, Resource, PrismaClient } from '@prisma/client';
-import { useRouter } from 'next/router';
-import { IpynbRenderer } from 'react-ipynb-renderer';
-import 'katex/dist/katex.min.css';
-import { title } from 'process';
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import SideBar from "../../../components/layouts/SideBar";
+import TitlePage from "../../../components/layouts/TitlePage";
+import { trpc } from "../../../utils/trpc";
+import YouTube from "react-youtube";
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { Course, Resource, PrismaClient } from "@prisma/client";
+import { useRouter } from "next/router";
+import { IpynbRenderer } from "react-ipynb-renderer";
+import "katex/dist/katex.min.css";
+import { title } from "process";
 // import 'react-ipynb-renderer/dist/styles/grade3.css';
-import { ArrowLongLeftIcon } from '@heroicons/react/20/solid';
-import Link from 'next/link';
-import Breadcrumbs from '../../../components/Breadcrumbs';
+import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 type Props = {
   course: Course;
   part: Resource;
@@ -23,22 +23,23 @@ type Props = {
 
 export default function CoursePage({ course, part, notebook, parts }: Props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const notebookJSON = JSON.parse(notebook);
   return (
     <SideBar
       topOfBar={
         <span>
-          {' '}
+          {" "}
           <div className="text-white text-lg">
             <span className="text-2xl pr-2 font-thin">
-              <Link href={`/dersler/${course.slug}`}>{'<'}</Link>
+              <Link href={`/dersler/${course.slug}`}>{"<"}</Link>
             </span>
             {course.name}
           </div>
         </span>
       }
       navItems={parts.map((part) => ({
-        title: part.id + '.' + part.title,
+        title: part.id + "." + part.title,
         id: part.part,
       }))}
       selectedIndex={part.part - 1}
@@ -47,7 +48,7 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
         breadcrumbs={
           <Breadcrumbs
             breadcrumbs={[
-              { name: 'Dersler', href: '/dersler' },
+              { name: "Dersler", href: "/dersler" },
               { name: course.name, href: `/dersler/${course.slug}` },
               { name: part.title, href: `/dersler/${part.part}` },
             ]}
@@ -59,9 +60,9 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
               playerVars: {
                 autoplay: 1,
               },
-              width: '100%',
-              height: '700px',
-              className: 'absolute',
+              width: "100%",
+              height: "700px",
+              className: "absolute",
             }}
             videoId={part?.videoId}
           />
@@ -100,9 +101,9 @@ export default function CoursePage({ course, part, notebook, parts }: Props) {
             bgTransparent={true}
             formulaOptions={{
               // optional
-              renderer: 'mathjax', // katex by default
+              renderer: "mathjax", // katex by default
               katex: {
-                delimiters: 'gitlab', // dollars by default
+                delimiters: "gitlab", // dollars by default
                 katexOptions: {
                   fleqn: false,
                 },
@@ -151,7 +152,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const notebook = part && (await fetch(part?.resourceUrl));
   const notebookContents = notebook && (await notebook.text());
-  console.log('@@@COURSE', course);
+  console.log("@@@COURSE", course);
   return {
     props: {
       course,

@@ -1,10 +1,9 @@
 import NextAuth, { type NextAuthOptions } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
+import GoogleProvider from "next-auth/providers/google";
 
 // Prisma adapter for NextAuth, optional and can be removed
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "../../../server/db/client";
-import { env } from "../../../env/server.mjs";
 
 export const authOptions: NextAuthOptions = {
   // Include user.id on session
@@ -15,16 +14,36 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+    async jwt({ token, account }) {
+      if (account?.accessToken) {
+        token.accessToken = account.accessToken;
+      }
+      return token;
+    },
+    redirect: async ({ url }) => {
+      if (url === "/user") {
+        return Promise.resolve("/");
+      }
+      return Promise.resolve("/");
+    },
   },
   // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
   providers: [
-    DiscordProvider({
-      clientId: env.DISCORD_CLIENT_ID,
-      clientSecret: env.DISCORD_CLIENT_SECRET,
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      authorization:
+        "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code",
     }),
-    // ...add more providers here
   ],
+  pages: {
+    signIn: "/auth/signin",
+  },
+  // jwt: {
+  //   encryption: true,
+  // },
+  secret: process.env.NEXT_SECRET as string,
 };
 
 export default NextAuth(authOptions);
