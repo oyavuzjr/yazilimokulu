@@ -8,15 +8,31 @@ import superjson from 'superjson';
 import type { AppRouter } from '../server/router';
 import '../styles/globals.css';
 import '../styles/custom-notebook.css';
+import Script from 'next/script';
 
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6FWEZVH8LY"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6FWEZVH8LY');
+        `}
+      </Script>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </>
   );
 };
 
